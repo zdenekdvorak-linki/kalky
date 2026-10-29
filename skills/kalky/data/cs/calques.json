@@ -921,6 +921,20 @@
       "label": "dá Androidu displej (aplikace dá zařízení vzhled/funkci) (gives Android a display / gives your phone a look)",
       "probe": "Nokia Launcher dá Androidu displej a klávesnici staré Nokie.",
       "counter": "Dá telefonu ještě šanci, než ho vymění za nový displej."
+    },
+    {
+      "key": "přepínač čeká v nastavení (funkce čeká v menu)",
+      "rx": "\\bček(á|ají)\\s+(v|ve|na|pod)\\s+(nastavení|menu|aplikaci|seznamu|složce|kartě|sekci|záložce)\\b",
+      "label": "přepínač čeká v nastavení (funkce čeká v menu) (the most important switch awaits in the settings)",
+      "probe": "Nejdůležitější přepínač ale čeká v nastavení.",
+      "counter": "Zákazník čeká na kurýra před domem."
+    },
+    {
+      "key": "dole leží číselník (prvek rozhraní leží/sedí)",
+      "rx": "\\b(dole|nahoře|vpravo|vlevo|uprostřed)\\s+(leží|sedí)\\s+(číselník|klávesnic\\w*|lišt\\w*|panel|tlačítk\\w*|menu|ikon\\w*|pole|přepínač|ovladač|displej)|\\b(leží|sedí)\\s+(těsně\\s+|hned\\s+)?(nad|pod|vedle)\\s+(volbou|tlačítkem|položkou|ikonou|displejem|menu|klávesnicí)\\b",
+      "label": "dole leží číselník (prvek rozhraní leží/sedí) (the keypad sits / lies at the bottom)",
+      "probe": "Dole leží číselník s písmeny pro psaní esemesek.",
+      "counter": "Telefon leží na stole displejem dolů a dole leží i nabíječka."
     }
   ],
   "generic": {

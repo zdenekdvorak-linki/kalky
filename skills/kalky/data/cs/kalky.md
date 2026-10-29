@@ -271,4 +271,8 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „dá Androidu displej (aplikace dá zařízení vzhled/funkci)" (z „gives Android a display / gives your phone a look") → **„napodobí na Androidu displej; Android s ní vypadá jako…; přidá do telefonu funkci"**
 
+- „přepínač čeká v nastavení (funkce čeká v menu)" (z „the most important switch awaits in the settings") → **„najdete v nastavení; je v nastavení"**
+
+- „dole leží číselník (prvek rozhraní leží/sedí)" (z „the keypad sits / lies at the bottom") → **„dole najdete číselník; dole je číselník; dole se nachází"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.
