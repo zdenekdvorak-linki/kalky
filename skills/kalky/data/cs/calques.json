@@ -907,6 +907,20 @@
       "label": "adults only hotel (adults-only hotel)",
       "probe": "Vybrali jsme adults only hotel na Krétě.",
       "counter": "Hotel je jen pro dospělé."
+    },
+    {
+      "key": "nosí prokliky / návštěvnost",
+      "rx": "\\b(?:nos(?:í|it|ily|ila|ilo)|nes(?:ou|e|l[aoy]?|t))\\s+(?:\\w+\\s+){0,3}?(?:proklik|návštěvnost|návštěv|impres|zobrazen|konverz|výkon|tržb)|\\b(?:proklik|návštěvnost|impres|konverz)\\w*\\s+(?:\\w+\\s+){0,2}?(?:nos(?:í|it|ily|ila)|nes(?:ou|e|l[aoy]?))\\b",
+      "label": "nosí prokliky / návštěvnost (to bring clicks / traffic)",
+      "probe": "Prokliky nosí necelá třetina stránek.",
+      "counter": "Brandová barva nese jen identitu, data nekóduje nikdy."
+    },
+    {
+      "key": "dá Androidu displej (aplikace dá zařízení vzhled/funkci)",
+      "rx": "\\b(dá|dává|dají|dávají|dodá|dodává)\\s+(Androidu|iPhonu|telefonu|mobilu|smartphonu|notebooku|počítači|tabletu|hodinkám|Windows)\\s+(\\w+\\s+){0,2}(vzhled\\w*|displej\\w*|klávesnic\\w*|rozhraní|podob\\w*|styl\\w*|funkc\\w*)",
+      "label": "dá Androidu displej (aplikace dá zařízení vzhled/funkci) (gives Android a display / gives your phone a look)",
+      "probe": "Nokia Launcher dá Androidu displej a klávesnici staré Nokie.",
+      "counter": "Dá telefonu ještě šanci, než ho vymění za nový displej."
     }
   ],
   "generic": {

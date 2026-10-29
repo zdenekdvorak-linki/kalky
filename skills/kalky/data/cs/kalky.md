@@ -267,4 +267,8 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „adults only hotel" (z „adults-only hotel") → **„hotel jen pro dospělé"**
 
+- „nosí prokliky / návštěvnost" (z „to bring clicks / traffic") → **„posílá, přivádí, získává"**
+
+- „dá Androidu displej (aplikace dá zařízení vzhled/funkci)" (z „gives Android a display / gives your phone a look") → **„napodobí na Androidu displej; Android s ní vypadá jako…; přidá do telefonu funkci"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.
