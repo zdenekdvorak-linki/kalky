@@ -1,0 +1,23 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        # 3.9 je nejstarší podporovaná verze (macOS ji má jako systémový Python)
+        python: ["3.9", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Data a checker
+        run: python skills/kalky/scripts/check.py --selftest
+      - name: Testy
+        run: python -m unittest discover tests -v

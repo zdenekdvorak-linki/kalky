@@ -1,0 +1,194 @@
+{
+  "_comment": "Slovenske kalky, format stejny jako cs/calques.json. Novy kalk pridavej skriptem scripts/add_calque.py --lang sk.",
+  "calques": [
+    {
+      "key": "beží pred realitou",
+      "rx": "\\bbež(í|ať|al[aoi]?)\\s+pred\\s+(realit|dob\\w|trh|skutočnost|potreb|očakávan|dopyt|vývoj|možnost)",
+      "label": "X beží pred Y (to run ahead of) → predbiehať",
+      "probe": "Špecifikácia beží pred realitou o dva roky.",
+      "counter": "Pretekár beží pred ostatnými a diváci tlieskajú."
+    },
+    {
+      "key": "vnútri sedí / pracuje X",
+      "rx": "\\bvnútri\\s+(sedí|nesedí|pracuje)\\b",
+      "label": "vnútri sedí/pracuje X (inside sits/works)",
+      "probe": "Vnútri sedí čip Snapdragon.",
+      "counter": "Vnútri nájdete čip Snapdragon."
+    },
+    {
+      "key": "nesie krytie / rating",
+      "rx": "\\b(nesie|nesú|nieslo)\\s+(kryti|rating|certifikác)",
+      "label": "vec „nesie\" krytie/rating (to carry a rating)",
+      "probe": "Slúchadlá nesú krytie IP54.",
+      "counter": "Slúchadlá majú krytie IP54."
+    },
+    {
+      "key": "výhoda leží v cene",
+      "rx": "\\b(výhod|nevýhod|úspor|problém|rozdiel|prínos|kúzl|sil)\\w*\\s+(leží|spočíva)\\b",
+      "label": "abstraktná vec „leží/spočíva\" (the advantage lies in)",
+      "probe": "Výhoda leží v cene.",
+      "counter": "Kľúč leží na stole vedľa dverí."
+    },
+    {
+      "key": "varianta sadne do malého bytu",
+      "rx": "\\bsadn[eú]\\s+(do|k)\\s+\\w+",
+      "label": "sadne do/k (to fit / to sit well) → hodí sa",
+      "probe": "Varianta sadne do malého bytu.",
+      "counter": "Vták sadne na konár pred oknom."
+    },
+    {
+      "key": "úspora stojí na bonuse",
+      "rx": "\\b(mechanik|akci|úspor|princíp|zľav)\\w*\\s+stojí\\s+na\\b",
+      "label": "vec „stojí na\" pravidle (to rest on / be built on)",
+      "probe": "Hlavná úspora stojí na bonuse.",
+      "counter": "Skriňa stojí na štyroch nôžkach."
+    },
+    {
+      "key": "eventne",
+      "rx": "\\beventne\\b",
+      "label": "eventne (z eventually) → nakoniec / napokon",
+      "probe": "Eventne sa cena zníži."
+    },
+    {
+      "key": "patetický",
+      "rx": "\\bpatetick\\w*",
+      "label": "patetický (z pathetic) → úbohý / žalostný",
+      "probe": "Je to patetický pokus o opravu."
+    },
+    {
+      "key": "seriózny problém",
+      "rx": "\\bseriózn\\w*\\s+(problém|chyb|riziko|poškoden|dôvod|nedostat)",
+      "label": "seriózny problém (z serious) → vážny problém",
+      "probe": "Je to seriózny problém so vzduchotechnikou.",
+      "counter": "Je to seriózny partner s dvadsaťročnou históriou."
+    },
+    {
+      "key": "kontent",
+      "rx": "\\bkontent\\w*",
+      "label": "kontent (z content) → obsah",
+      "probe": "Kvalitný kontent láka čitateľov."
+    },
+    {
+      "key": "konkurencia dostáva latku",
+      "rx": "dost[áa]v\\w*\\s+(\\w+\\s+)?latk\\w*",
+      "label": "konkurencia dostáva latku (to set the bar for the competition)",
+      "probe": "Konkurencia tým dostáva jasnú latku.",
+      "counter": "Konkurencii tým nastavuje jasnú latku."
+    },
+    {
+      "key": "vrstvu vyhadzuje von / drops the layer",
+      "rx": "\\b(?:farebn|číseln|obrazov|hardvér\\w+|softvér\\w+)\\w+ vrstvu vyhadzuje (?:von|preč)\\b|\\bvyhadzuje (?:farebn|obrazov|softvér\\w+)\\w+ vrstvu von\\b",
+      "label": "vrstvu vyhadzuje von / drops the layer (drops/throws out the layer)",
+      "probe": "farebnú vrstvu vyhadzuje von a necháva",
+      "counter": "z kabáta vyhadzuje starú peňaženku"
+    },
+    {
+      "key": "drží (nižšiu|vyššiu) cenu / holds a lower price",
+      "rx": "\\bdrž\\w+ (?:nižšiu|vyššiu|rovnakú|niz\\w+|vy\\w+) cenu\\b",
+      "label": "drží (nižšiu|vyššiu) cenu / holds a lower price (holds a lower/higher price)",
+      "probe": "čínska značka drží nižšiu cenu a rovnaký",
+      "counter": "drží sa pri cene a nechce ísť nižšie"
+    },
+    {
+      "key": "tlačidlo / konektor sedí na hrane",
+      "rx": "\\b(?:tlačidl\\w*|konektor\\w*|port\\w*|senzor\\w*|snímač\\w*|kamer\\w*|reproduktor\\w*|vypínač\\w*|slot\\w*|mikrofón\\w*|objektív\\w*)\\s+(?:ne)?sed[íi]\\b",
+      "label": "tlačidlo / konektor sedí na hrane (the button sits on the bottom edge)",
+      "probe": "Zapínacie tlačidlo sedí na spodnej hrane, kde ho ľahko stlačíte omylom.",
+      "counter": "Tlačidlo na spodnej strane ľahko stlačíte omylom."
+    },
+    {
+      "key": "čítačka vysiela pole",
+      "rx": "\\bvysiel\\w*\\s+(?:\\w+\\s+){0,2}pol[eia]\\b",
+      "label": "čítačka vysiela pole (to emit a field (CZ „vysílá pole“))",
+      "probe": "Čítačka vysiela pole.",
+      "counter": "Aktívne čipy vysielajú samy."
+    },
+    {
+      "key": "história hľadania",
+      "rx": "histór\\w* hľadania",
+      "label": "história hľadania (search history / historie hledání)",
+      "probe": "V Mapách ide o históriu hľadania a o zoznamy",
+      "counter": "Google používa históriu vyhľadávania"
+    },
+    {
+      "key": "Maj pekný deň",
+      "rx": "\\bMaj(te)?\\s+(pekný|krásny|príjemný|super)\\s+(deň|víkend|večer)",
+      "label": "Maj pekný deň (have a nice day)",
+      "probe": "Ďakujeme za nákup a majte pekný deň!",
+      "counter": "Pekný deň vám želá celý tím."
+    },
+    {
+      "key": "orchestrovať služby",
+      "rx": "\\borchestr(ov|uj)\\w*\\s+(\\w+\\s+){0,2}(služb|proces|trh|tím|dát|kampan|agent|systém|úloh|zariaden)",
+      "label": "orchestrovať služby (to orchestrate)",
+      "probe": "Brána vie orchestrovať celú domácnosť zariadení.",
+      "counter": "Skladateľ orchestroval symfóniu pre veľký orchester."
+    },
+    {
+      "key": "dizajnérska kolaborácia",
+      "rx": "\\b(dizajnérsk|módn|limitovan|spoločn|exkluzívn|nov)\\w*\\s+kolaboráci\\w*|\\bkolaboráci\\w*\\s+(so\\s+)?značk",
+      "label": "dizajnérska kolaborácia (collaboration (brand collab))",
+      "probe": "Nová kolaborácia so značkou Nike vyjde v piatok.",
+      "counter": "Kolaborácia s okupantmi bola trestná."
+    },
+    {
+      "key": "diseminácia výsledkov",
+      "rx": "\\bdisemináci\\w*",
+      "label": "diseminácia výsledkov (dissemination)",
+      "probe": "Projekt počíta s disemináciou výsledkov.",
+      "counter": "Dizertácia vyšla knižne."
+    },
+    {
+      "key": "na konci dňa (= napokon)",
+      "rx": "(?:^|[.!?]\\s+)Na\\s+konci\\s+dňa\\s*,|\\bna\\s+konci\\s+dňa\\s+(ide|je\\s+to|rozhoduj\\w*|záleží|platí|aj\\s+tak)",
+      "label": "na konci dňa (= napokon) (at the end of the day)",
+      "probe": "Na konci dňa, rozhoduje cena.",
+      "counter": "Na konci dňa zapadá slnko za kopec."
+    },
+    {
+      "key": "to spraví rozdiel",
+      "rx": "\\b(sprav|rob|urob)\\w*\\s+(\\w+\\s+)?rozdiel\\b",
+      "label": "to spraví rozdiel (to make a difference)",
+      "probe": "Lepší filter spraví veľký rozdiel.",
+      "counter": "Rozdiel v cene je malý."
+    },
+    {
+      "key": "kontrolovať osvetlenie (= ovládať)",
+      "rx": "\\bkontrol\\w*\\s+(\\w+\\s+)?(osvetlen|svetl\\w*|žalúzi\\w*|rolet\\w*|hlasitos\\w*|prehrávani)|\\bkontrol\\w*\\s+(\\w+\\s+){0,3}hlasom\\b",
+      "label": "kontrolovať osvetlenie (= ovládať) (to control)",
+      "probe": "Aplikácia vie kontrolovať osvetlenie v celom byte.",
+      "counter": "Pred cestou skontrolujte tlak v pneumatikách."
+    },
+    {
+      "key": "oveľa komplexnejší (= zložitejší)",
+      "rx": "\\b(oveľa|omnoho|príliš|veľmi|dosť)\\s+komplexn\\w*|\\bkomplexn\\w*\\s+(problém|situáci|otázk)",
+      "label": "oveľa komplexnejší (= zložitejší) (far more complex)",
+      "probe": "Situácia je oveľa komplexnejšia.",
+      "counter": "Ponúka komplexné riešenie pre firmy."
+    },
+    {
+      "key": "evidencia ukazuje (= dôkazy)",
+      "rx": "\\bevidenci\\w*\\s+(ukazuj|naznačuj|svedč|potvrdzuj|dokladá|dokazuj|podporuj)\\w*|\\b(vedeck|empirick|anekdotick|siln|slab|presvedčiv)\\w*\\s+evidenci\\w*",
+      "label": "evidencia ukazuje (= dôkazy) (the evidence shows)",
+      "probe": "Vedecká evidencia ukazuje opak.",
+      "counter": "Evidencia tovaru ukazuje stav skladu."
+    },
+    {
+      "key": "aplikovať sa na pozíciu",
+      "rx": "\\baplikov\\w*\\s+(si\\s+|sa\\s+)?na\\s+(pozíci|miest|prác|ponuk|stáž)",
+      "label": "aplikovať sa na pozíciu (to apply for a job)",
+      "probe": "Kto chce aplikovať na pozíciu, pošle CV.",
+      "counter": "Náter aplikujte na suchý povrch."
+    }
+  ],
+  "generic": {
+    "_comment": "Zobecneny vzor: fyzicke/pohybove sloveso s abstraktnim podmetem. Chyta i kalky, ktere v seznamu jeste nejsou. Varovani, ne tvrde poruseni - falesne poplachy jsou ocekavane.",
+    "abstract": "výhod|nevýhod|úspor|problém|mechanik|rozdiel|princíp|kúzl|sil|hodnot|rezerv|jadr|point|dôvod|zmysel|kľúč|ťažisk|potenciál|rizik|tajomstv|zisk|podstat|prínos|slab(in|ost)|kvalit",
+    "verbs": "lež|stoj[íi]|sed[íne]|nes(ie|ú|lo)|bež|ženie|ženú|mieri|spočív|tiahn|krá[čc]",
+    "label": "abstraktný podmet s fyzickým slovesom (typický vzor kalku)"
+  },
+  "antithesis": {
+    "rx": "[^.!?]{4,60},\\s+nie\\s+(?!je\\b|sú\\b)[^.!?]{3,50}[.!?]",
+    "label": "antitéza „A, nie B\""
+  }
+}

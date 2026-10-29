@@ -1,0 +1,931 @@
+{
+  "_comment": "Ceske kalky. Kazdy zaznam: key (doslova text v prvnich uvozovkach odrazky v kalky.md), rx (Python regex, hleda se s re.I), label, probe (veta, ktera MUSI padnout), counter (veta, ktera padnout NESMI). Novy kalk pridavej skriptem scripts/add_calque.py, ne rucne.",
+  "calques": [
+    {
+      "key": "běžet před realitou",
+      "rx": "\\bběž(í|et|el[aoy]?)\\s+před\\s+(realit|dob\\w|trh|skutečnost|potřeb|očekáván|poptáv|vývoj|možnost)",
+      "label": "X běží před Y (to run ahead of) → předbíhat",
+      "probe": "Specifikace běží před realitou o dva roky.",
+      "counter": "Závodník běží před ostatními a diváci tleskají."
+    },
+    {
+      "key": "uvnitř sedí / nesedí X",
+      "rx": "\\buvnitř\\s+(sedí|nesedí|pracuje)\\b",
+      "label": "uvnitř sedí/pracuje X (inside sits/works)",
+      "probe": "Uvnitř sedí čip Snapdragon."
+    },
+    {
+      "key": "žene text enginem",
+      "rx": "\\bžene\\s+\\w+\\s+(engine|enginem)",
+      "label": "žene text enginem (to drive through)",
+      "probe": "Aplikace žene text enginem DeepL."
+    },
+    {
+      "key": "zařízení odpovídá majiteli",
+      "rx": "\\bodpovídá\\s+(majitel|vlastník)",
+      "label": "answers to = patří",
+      "probe": "Zařízení odpovídá majiteli."
+    },
+    {
+      "key": "nese krytí / rating",
+      "rx": "\\b(nese|nesou|neslo)\\s+(krytí|rating|certifikac)|\\b(po)?hlíd\\w*\\s+krytí",
+      "label": "věc „nese\" krytí/rating (to carry a rating)",
+      "probe": "Sluchátka nesou krytí IP54."
+    },
+    {
+      "key": "nad displejem / nad hardwarem běží software",
+      "rx": "\\bnad\\s+(?:[\\w-]+\\s+){0,2}\\w{3,}(em|ou|y)\\s+běž\\w+",
+      "label": "nad hardwarem běží software (runs on top of / atop)",
+      "probe": "Nad displejem běží Android 15."
+    },
+    {
+      "key": "ovladač nese tlačítka",
+      "rx": "\\b(nese|nesou|neslo)\\s+(tlačítk|symbol|popisk|port\\b|konektor)",
+      "label": "věc „nese\" své součásti (to carry / to feature)",
+      "probe": "Ovladač nese tlačítka pro hlasitost."
+    },
+    {
+      "key": "reakce na pohyb běží mimo aplikaci",
+      "rx": "\\bběž\\w+\\s+(na|mimo)\\s+(aplikac|hardwar|displej)",
+      "label": "funkce „běží na/mimo\" (to run)",
+      "probe": "Automatika běží mimo aplikaci."
+    },
+    {
+      "key": "nejnižší stupeň sedne k posteli",
+      "rx": "\\bsedne\\s+(k|do|na)\\b|\\b(hlavic|termostat|adaptér|nástav)\\w*(?:\\s+[\\w-]+){0,3}\\s+sed[íi]\\s+na\\s+(ventil|závit|RA\\b|M\\d)",
+      "label": "sednout = vyhovovat (to fit / to sit well)",
+      "probe": "Nejnižší stupeň sedne k posteli."
+    },
+    {
+      "key": "peníze leží v sadách",
+      "rx": "\\b(peníz\\w*|výhod\\w*|nevýhod\\w*|problém\\w*|úspor\\w*|rozdíl\\w*|kouzl\\w*|síl\\w*|hodnot\\w*|jádr\\w*|point\\w*|těžišt\\w*)\\s+(\\w+\\s+)?lež\\w+",
+      "label": "X leží v Y (the money lies in)",
+      "probe": "Výhoda leží v ceně.",
+      "counter": "Kabel leží ve krabici."
+    },
+    {
+      "key": "skutečné peníze najdete v balení",
+      "rx": "\\b(skutečn|reáln|velk|opravdov)\\w*\\s+peníze\\b",
+      "label": "skutečné peníze jsou v X (the real money is in)",
+      "probe": "Skutečné peníze najdete v balení."
+    },
+    {
+      "key": "mechanika stojí na jednoduchém pravidle",
+      "rx": "\\b(mechanik\\w*|princip\\w*|akc\\w*|úspor\\w*|sleva|slevy|logik\\w*|systém\\w*|nabídk\\w*)\\s+(\\w+\\s+)?stoj[íi]\\s+na\\s+",
+      "label": "X stojí na Y (to rest on / to be built on)",
+      "probe": "Mechanika stojí na jednoduchém pravidle.",
+      "counter": "Kamera stojí na zdi u vchodu."
+    },
+    {
+      "key": "nejhlubší škrt",
+      "rx": "\\b(nejhlubší|hlubok\\w+|hlubší)\\s+(škrt|slev)",
+      "label": "hluboký škrt/sleva (deep discount)",
+      "probe": "Nejhlubší škrt čeká sluchátka."
+    },
+    {
+      "key": "přínos spočívá v ceně",
+      "rx": "\\b(přínos|výhod\\w*|kouzl\\w*)\\s+spočív\\w+",
+      "label": "přínos spočívá v ceně (the benefit lies in)",
+      "probe": "Hlavní přínos spočívá v ceně.",
+      "counter": "Klíč spočívá v zámku."
+    },
+    {
+      "key": "kategorie nese 30 % tržeb",
+      "rx": "\\b(nese|nesou|neslo)\\s+\\d+([.,]\\d+)?\\s*%",
+      "label": "kategorie nese 30 % tržeb (to carry a share)",
+      "probe": "Kategorie nese 30 % tržeb.",
+      "counter": "Sloup nese střechu nad vchodem."
+    },
+    {
+      "key": "článek slib nedoručí",
+      "rx": "\\b(slib\\w*\\s+(\\w+\\s+){0,2}doruč\\w+|doruč\\w+\\s+slib\\w*)",
+      "label": "článek slib nedoručí (to deliver on a promise)",
+      "probe": "Useknutý článek slib nemusí doručit.",
+      "counter": "Kurýr doručí zásilku do dvou dnů."
+    },
+    {
+      "key": "přesně ta výměna, kterou popisuje",
+      "rx": "\\b(ta|tu|té|té\\s+samé)\\s+výměn\\w+,\\s+kter",
+      "label": "přesně ta výměna, kterou popisuje (trade-off)",
+      "probe": "Přesně ta výměna, kterou celý report popisuje.",
+      "counter": "Výměna baterie trvá deset minut."
+    },
+    {
+      "key": "autor drží podíl na 5 %",
+      "rx": "\\bdrž\\w+\\s+(\\w+\\s+){0,2}podíl\\w*\\s+(\\w+\\s+){0,3}na\\s+\\d+([.,]\\d+)?\\s*%",
+      "label": "autor drží podíl na 5 % (to hold a share at)",
+      "probe": "Nejlepší autor drží podíl chyb na 5 %.",
+      "counter": "Vlhkost drželi na 65 % celý týden."
+    },
+    {
+      "key": "kde to sedí konkrétně",
+      "rx": "\\b(kde|tam)\\s+(to|se\\s+to|problém\\w*|rozdíl\\w*|chyb\\w*)\\s+sed[íi]",
+      "label": "kde to sedí konkrétně (where it sits)",
+      "probe": "Kde to sedí konkrétně.",
+      "counter": "Čísla sedí na korunu."
+    },
+    {
+      "key": "motor ztráty důvěry",
+      "rx": "\\bmotor\\w*\\s+(\\w+\\s+){0,2}(ztrát|růst|poklesu|změn|nárůst)\\w*",
+      "label": "motor ztráty důvěry (the driver of)",
+      "probe": "Nejpravděpodobnější motor ztráty důvěry je paywall.",
+      "counter": "Motor auta se rozběhl."
+    },
+    {
+      "key": "placená zeď",
+      "rx": "\\bplacen\\w+\\s+zď?[ei]\\w*|\\bplacenou\\s+zeď",
+      "label": "placená zeď (paywall)",
+      "probe": "Ve feedu čtenář placenou zeď nevidí.",
+      "counter": "Placená verze aplikace stojí 200 korun."
+    },
+    {
+      "key": "Google začal tlačit články publiku",
+      "rx": "\\btlačit\\s+(\\w+\\s+){0,2}(článk|obsah|zprávy|titulk)\\w*",
+      "label": "Google začal tlačit články publiku (to push content to)",
+      "probe": "Google začal tlačit stejné články většímu publiku.",
+      "counter": "Musel tlačit vozík do kopce."
+    },
+    {
+      "key": "per-článkový test",
+      "rx": "\\bper-\\w+",
+      "label": "per-článkový test (per-article)",
+      "probe": "Per-článkovým testem to nejde odlišit.",
+      "counter": "Cena je za kus, tedy 30 korun."
+    },
+    {
+      "key": "propad sazby",
+      "rx": "\\b(propad|pokles|růst)\\w*\\s+sazb\\w+",
+      "label": "propad sazby (a drop in the rate)",
+      "probe": "Projevilo by se to plošným propadem sazby.",
+      "counter": "Zvýšení sazby daně z příjmu."
+    },
+    {
+      "key": "napříč vším",
+      "rx": "\\bnapříč\\s+(vším|všemi\\s+věcmi|celým\\s+spektrem)\\b",
+      "label": "napříč vším (across everything)",
+      "probe": "Projevilo by se to propadem napříč vším.",
+      "counter": "Napříč všemi rubrikami je výsledek stejný."
+    },
+    {
+      "key": "propad se otevřel",
+      "rx": "\\b(propad|rozdíl|mezera|ztrát)\\w*\\s+se\\s+otevř\\w+",
+      "label": "propad se otevřel (the gap opened)",
+      "probe": "Propad se otevřel v tomhle okně.",
+      "counter": "Dveře se otevřely samy."
+    },
+    {
+      "key": "časování jednoduchý práh nepodporuje",
+      "rx": "\\b(časování|data|čísla|výsledk\\w+)\\s+(\\w+\\s+){0,3}nepodporuj\\w+",
+      "label": "časování jednoduchý práh nepodporuje (the timing does not support)",
+      "probe": "A časování jednoduchý práh nepodporuje.",
+      "counter": "Prohlížeč nepodporuje tenhle formát."
+    },
+    {
+      "key": "hype slovník",
+      "rx": "\\bhype\\w*\\s+(slovník|jazyk|titulek|titulk\\w+|obsah|styl)",
+      "label": "hype slovník (hype vocabulary)",
+      "probe": "Zklidnění se projevilo na interpunkci, hype slovník zůstal.",
+      "counter": "Kolem té hry byl velký hype."
+    },
+    {
+      "key": "je předmětem otevřené otázky",
+      "rx": "\\b(jsou|je|byl\\w*)\\s+(\\w+\\s+){0,3}předmětem\\b",
+      "label": "je předmětem otevřené otázky (is subject to an open question)",
+      "probe": "Výsledky jsou zatím předmětem otevřené otázky.",
+      "counter": "Předmětem dodávky je server."
+    },
+    {
+      "key": "jít o X Kč níž / dolů (o ceně)",
+      "rx": "jd(e|ou)[^.!?]{0,40}\\bo\\s+\\d[\\d\\s]*\\s*(Kč|korun)\\s+(níž|dolů|dolu)",
+      "label": "jít o X Kč níž / dolů (o ceně) (prices go down by X)",
+      "probe": "jedna ze čtyř Tapo jde teď s kódem o 440 Kč níž",
+      "counter": "výtah jede o dvě patra níž a nákladní verze jde ještě hlouběji"
+    },
+    {
+      "key": "je fér přiznat / říct",
+      "rx": "je fér (přiznat|říct|říci|dodat|zmínit|konstatovat)",
+      "label": "je fér přiznat / říct (it's fair to say / admit)",
+      "probe": "Za tu cenu je to hodně peněz a to je fér přiznat.",
+      "counter": "Rozdělení odměn je fér vůči oběma týmům."
+    },
+    {
+      "key": "web stojí vedle firemního",
+      "rx": "\\b(web\\w*|projekt\\w*|značk\\w+|blog\\w*|nástroj\\w*|služb\\w+|aplikac\\w+|e-?shop\\w*|rubrik\\w+|sekc\\w+|verz\\w+)\\s+(?:\\w+\\s+){0,2}stoj[íi]\\s+vedle",
+      "label": "web stojí vedle firemního (to stand next to / to sit alongside)",
+      "probe": "Osobní web mi stojí vedle firemního.",
+      "counter": "Dům stojí vedle silnice a zahrada je za ním."
+    },
+    {
+      "key": "rovnou z krabice",
+      "rx": "(?:rovnou|přímo|hned|už) z krabice",
+      "label": "rovnou z krabice (out of the box)",
+      "probe": "Systém je Android 16 rovnou z krabice.",
+      "counter": "Telefon jsem vytáhl z krabice a hned zapnul."
+    },
+    {
+      "key": "křemík ve významu čip",
+      "rx": "(?:stejný|stejného|stejném|stejným|nový|nového|vlastní|jiný) křemík",
+      "label": "křemík ve významu čip (the same silicon)",
+      "probe": "Uvnitř sedí stejný křemík jako loni.",
+      "counter": "Křemík je po kyslíku druhý nejrozšířenější prvek v zemské kůře."
+    },
+    {
+      "key": "v/pod/za X sedí komponenta",
+      "rx": "(?:^|[ ,])(?:v|ve|pod|za|nad|uvnitř)(?: [^ ,.]+){1,3} (?:sedí|nesedí)(?! (?:na korunu|přesně|dobře|pevně|správně|jak))",
+      "label": "v/pod/za X sedí komponenta (the module houses / a sensor sits inside)",
+      "probe": "Fotoaparát dostal svislou pilulku, ve které nejspíš sedí jeden snímač a přisvětlovací LED.",
+      "counter": "Čísla v tabulce sedí na korunu."
+    },
+    {
+      "key": "ceny startují na X (prices start at X)",
+      "rx": "startuj\\w*\\s+(?:na|od)\\s+\\d",
+      "label": "ceny startují na X (prices start at X) (prices start at $269)",
+      "probe": "Předobjednávky startují na 269 dolarech.",
+      "counter": "Závodníci startují na hlavní dráze."
+    },
+    {
+      "key": "štědrá výbava/paměť (generous specs)",
+      "rx": "štědr\\w+\\s+(?:výbav|paměť|pamět\\w+|úložišt|specifikac)",
+      "label": "štědrá výbava/paměť (generous specs) (a generous set of specs)",
+      "probe": "Na čtečku jde o štědrou výbavu.",
+      "counter": "Byl to štědrý dárce knihovny."
+    },
+    {
+      "key": "signál/síť bojuje s X",
+      "rx": "\\b(signál|rychlost|síť|spojení|přenos)\\w* bojuje\\b",
+      "label": "signál/síť bojuje s X (the signal struggles/battles with X)",
+      "probe": "kde signál bojuje s vyšší úrovní rušení",
+      "counter": "závodník bojuje s únavou v posledním kole"
+    },
+    {
+      "key": "obsah kreslí/vykresluje X PPI",
+      "rx": "\\b(text|písmo|obraz|obrázek|font|typografie)\\s+(kreslí|vykresluje|renderuje|vykreslí)\\b",
+      "label": "obsah kreslí/vykresluje X PPI (text/type renders at X PPI)",
+      "probe": "písmo kreslí v ostrosti 300 PPI",
+      "counter": "displej vykresluje písmo ve 300 PPI"
+    },
+    {
+      "key": "obrazovka spánku",
+      "rx": "obrazovk\\w*\\s+spánku",
+      "label": "obrazovka spánku (sleep screen)",
+      "probe": "Bočním tlačítkům přiřadíte akce a vyměníte obrazovku spánku.",
+      "counter": "Obrázek, který čtečka ukáže po uspání, si vyměníte v nastavení."
+    },
+    {
+      "key": "navrchu / vzadu sedí komponenta",
+      "rx": "\\b(?:navrchu|vespod|naspodu|nahoře|dole|vzadu|vpředu|vepředu|uprostřed|stranou|bokem|vlevo|vpravo)\\s+(?:ne)?sedí\\b(?!\\s+(?:řidič|spolujezdec|pasažér|cestující|divák|porota|člověk|lidé|hráč|dítě|děti|pes|kočka|host|posádka|pilot|žák|student))",
+      "label": "navrchu / vzadu sedí komponenta (the button sits on top)",
+      "probe": "Navrchu sedí tlačítko Spotify Tap, které spustí hudbu jediným stiskem.",
+      "counter": "Vpředu sedí řidič a vzadu sedí děti."
+    },
+    {
+      "key": "vrstvu vyhazuje ven / drops the layer",
+      "rx": "\\b(?:barevn|číseln|obrazov|hardwarov|softwarov)\\w+ vrstvu vyhazuje (?:ven|pryč)\\b|\\bvyhazuje (?:barevn|obrazov|softwarov)\\w+ vrstvu ven\\b",
+      "label": "vrstvu vyhazuje ven / drops the layer (drops/throws out the layer)",
+      "probe": "barevnou vrstvu vyhazuje ven a nechává",
+      "counter": "z kabátu vyhazuje starou peněženku"
+    },
+    {
+      "key": "drží (nižší|vyšší) cenu / holds a lower price",
+      "rx": "\\bdrž\\w+ (?:nižší|vyšší|stejnou|nizku|vysokou|niz\\w+|vy\\w+) cenu\\b",
+      "label": "drží (nižší|vyšší) cenu / holds a lower price (holds a lower/higher price)",
+      "probe": "čínská značka drží nižší cenu a stejný",
+      "counter": "drží se u ceny a nechce jít níž"
+    },
+    {
+      "key": "chodit-do-vyhledavace",
+      "rx": "chodit\\s+do\\s+vyhled[aá]v[aá][cč](?:e|i)|do\\s+vyhled[aá]v[aá][cč]e\\s+(?:\\w+\\s+){0,2}chod",
+      "label": "chodit-do-vyhledavace (to go into search / to go to the search engine)",
+      "probe": "Každá kombinace vyrobí vlastní adresu a do vyhledávače nemá chodit.",
+      "counter": "Do vyhledávače zadáte název modelu a najdete recenze."
+    },
+    {
+      "key": "poháněný modelem / AI",
+      "rx": "poháněn\\w*\\s+(?:modelem|AI\\b|umělou\\s+inteligencí)",
+      "label": "poháněný modelem / AI (powered by (model / AI))",
+      "probe": "iFLYTEK tablet propaguje jako poháněný modelem GPT-5.",
+      "counter": "Vůz poháněný elektromotorem dojede 400 kilometrů."
+    },
+    {
+      "key": "přemosťuje do X (bridges into X)",
+      "rx": "přemos[ťt]uj[a-zá-žíéúůýěščřžďň]* do ",
+      "label": "přemosťuje do X (bridges into X) (bridges into Matter / bridges devices into the network)",
+      "probe": "Sestava přemosťuje do Matteru jak nová zařízení po Bluetooth.",
+      "counter": "Lávka přemosťuje potok za domem."
+    },
+    {
+      "key": "tlačítko / konektor sedí na hraně",
+      "rx": "\\b(?:tlačítk\\w*|konektor\\w*|port\\w*|senzor\\w*|čidl\\w*|kamer\\w*|reproduktor\\w*|vypínač\\w*|slot\\w*|mikrofon\\w*|objektiv\\w*)\\s+(?:ne)?sed[íi]\\b",
+      "label": "tlačítko / konektor sedí na hraně (the button sits on the bottom edge)",
+      "probe": "Zapínací tlačítko sedí na spodní hraně, kde ho snadno zmáčknete omylem.",
+      "counter": "Tlačítko na spodní straně snadno zmáčknete omylem."
+    },
+    {
+      "key": "překládá na X (translates to X)",
+      "rx": "překlád[a-zá-žA-ZÁ-Ž]+ na [0-9]",
+      "label": "překládá na X (translates to X) (which the manufacturer translates to 90 days)",
+      "probe": "což výrobce překládá na 90 dní bez vyprazdňování",
+      "counter": "Knihu překládal na chatě a hotovo bylo za rok"
+    },
+    {
+      "key": "držet jednotný design / styl",
+      "rx": "\\bdrž\\w*\\s+jednotn\\w*\\s+(design|styl|vzhled)",
+      "label": "držet jednotný design / styl (to hold / keep a consistent design)",
+      "probe": "dávají možnost držet jednotný design v hotelech",
+      "counter": "obchod drží jednotnou cenu po celý rok"
+    },
+    {
+      "key": "za zlomek času",
+      "rx": "za zlomek (?:času|doby)",
+      "label": "za zlomek času (in a fraction of the time)",
+      "probe": "Hotovo to máte za zlomek času.",
+      "counter": "Koupil jsem to za zlomek ceny."
+    },
+    {
+      "key": "ceny začínají na X",
+      "rx": "[Cc]eny začínají na \\d",
+      "label": "ceny začínají na X (prices start at X)",
+      "probe": "Ceny začínají na 759 Kč.",
+      "counter": "Ceny začínají od 759 Kč."
+    },
+    {
+      "key": "objednávky startují / spouští (datum)",
+      "rx": "\\bobjednávk\\w*\\s+(?:startuj|spouští|se\\s+spouštěj)\\w*",
+      "label": "objednávky startují / spouští (datum) (orders start / open on (date))",
+      "probe": "Objednávky startují 23. října.",
+      "counter": "Závodníci startují 23. října ráno."
+    },
+    {
+      "key": "rozdat internet / Wi-Fi",
+      "rx": "\\brozd[aá]\\w*\\s+(?:internet|wi-?fi)",
+      "label": "rozdat internet / Wi-Fi (hand out internet / give out Wi-Fi)",
+      "probe": "Router rozdá internet celé rodině.",
+      "counter": "Na stánku rozdávají letáky celé rodině."
+    },
+    {
+      "key": "svítí N nitů",
+      "rx": "\\b(?:svítí|svítil[aoy]?|svítit)\\b[^.]{0,40}\\bnit\\w*",
+      "label": "svítí N nitů (shines / glows at N nits)",
+      "probe": "Honor Watch Fit 6 upozorní na fibrilaci a svítí třemi tisíci nity.",
+      "counter": "Při nabíjení displej naopak svítí a údaje průběžně obnovuje."
+    },
+    {
+      "key": "displej svítí (= má podsvícení)",
+      "rx": "\\bdisplej\\b(?:\\s+\\S+){0,8}?\\s+svítí\\b(?!\\s+\\d)",
+      "label": "displej svítí (= má podsvícení) (the display glows / lights up)",
+      "probe": "Šestipalcový displej Carta 1300 s hustotou 300 ppi svítí a jeho světlo přepnete mezi teplým a studeným odstínem.",
+      "counter": "Kontrolka nad displejem svítí zeleně, když se čtečka nabíjí."
+    },
+    {
+      "key": "nejschopnější model",
+      "rx": "nejschopn[ěe]j[šs]\\w* (model|nástroj|systém)",
+      "label": "nejschopnější model (our most capable model)",
+      "probe": "Google ho představil jako svůj nejschopnější model na složité programování",
+      "counter": "Je to nejschopnější manažer v týmu"
+    },
+    {
+      "key": "jezdí na baterii",
+      "rx": "\\b(?:jezd\\w*|jed(?:e|ou))\\s+na\\s+(?:\\w+\\s+){0,2}(?:bateri|akumulátor|článk|monočlán|tužkov)",
+      "label": "jezdí na baterii (runs on a battery)",
+      "probe": "Na Alze stojí 499 Kč, jezdí na baterii AA a má tichý klik.",
+      "counter": "Napájí ji jedna tužková baterie AA."
+    },
+    {
+      "key": "poslat do prodeje",
+      "rx": "\\b(?:posl|pošl|posíl)\\w*\\s+(?:\\w+\\s+){0,2}do\\s+(?:prodeje|obchod\\w*|Evrop\\w*)|\\b(?:posl|pošl)\\w*\\s+do\\s+mobilů\\b",
+      "label": "poslat do prodeje (to send to market / ship to)",
+      "probe": "Logitech poslal do prodeje myš Pebble Up.",
+      "counter": "Logitech začal prodávat myš Pebble Up a vzorek poslal do redakce."
+    },
+    {
+      "key": "vede skladem",
+      "rx": "\\bved(e|ou)\\s+skladem",
+      "label": "vede skladem (carries in stock)",
+      "probe": "Do přehledu jsem vybral modely, které Alza vede skladem.",
+      "counter": "Do přehledu jsem vybral modely, které Alza má skladem."
+    },
+    {
+      "key": "cena nekončí",
+      "rx": "\\bcena\\b[^.,;]{0,25}\\bnekonč",
+      "label": "cena nekončí (the price doesn't end there)",
+      "probe": "U šesti modelů ale cena na krabici nekončí.",
+      "counter": "U šesti modelů ale cenou na krabici náklady nekončí."
+    },
+    {
+      "key": "nabít z kabelu",
+      "rx": "\\bnabi\\w*\\s+z\\s+kabelu",
+      "label": "nabít z kabelu (charge from a cable)",
+      "probe": "Mají akumulátor, který nabijete z kabelu.",
+      "counter": "Mají akumulátor, který nabíjíte kabelem."
+    },
+    {
+      "key": "nejvíc peněz rozhoduje",
+      "rx": "\\bnejvíc\\w*\\s+peněz\\b[^.]{0,20}\\brozhoduj",
+      "label": "nejvíc peněz rozhoduje (what decides the most money)",
+      "probe": "Nejvíc peněz ale rozhoduje poslední sloupec tabulky.",
+      "counter": "Nejvíc peněz utratíte za baterie."
+    },
+    {
+      "key": "rozměry mohou rozhodnout",
+      "rx": "\\b(rozměr|velikost|hmotnost|výdrž|cen)\\w*\\s+(ale\\s+)?(můžou|mohou|může)\\s+rozhodnout",
+      "label": "rozměry mohou rozhodnout (size can make the difference)",
+      "probe": "Malé rozměry ale můžou rozhodnout u dveří s madlem.",
+      "counter": "Zákazníci mohou rozhodnout sami."
+    },
+    {
+      "key": "přístroj vyfoukne prach",
+      "rx": "\\b(vysavač|přístroj|čističk|spotřebič|zařízení|model|kus)\\w*[^.]{0,40}\\bvyfou\\w*",
+      "label": "přístroj vyfoukne prach (the device blows out / emits dust)",
+      "probe": "Nejlepší třídu A dostal přístroj, který vyfoukl nejvýš 0,02 % nasátého prachu.",
+      "counter": "Prach z klávesnice vyfouknete stlačeným vzduchem."
+    },
+    {
+      "key": "pracovat vzdáleně",
+      "rx": "\\b(pracuj|pracov)\\w*\\s+(\\w+\\s+)?vzdáleně\\b|\\bvzdálen\\w*\\s+prác\\w*",
+      "label": "pracovat vzdáleně (to work remotely)",
+      "probe": "Polovina týmu pracuje vzdáleně.",
+      "counter": "Hrad stojí vzdáleně od města a vzdáleně připomíná zámek."
+    },
+    {
+      "key": "naše expertíza (ve významu odbornost)",
+      "rx": "\\b(naš\\w*|vaš\\w*|jeho|její\\w*|jejich|sv[éoáý]\\w*|mo[ujíé]\\w*|tv[oé]\\w*)\\s+expertíz\\w*|\\bexpertíz\\w*\\s+(v|ve|na)\\s+(oblasti|oboru|SEO|marketingu|obsahu)\\b",
+      "label": "naše expertíza (ve významu odbornost) (our expertise)",
+      "probe": "Agentura staví na své expertíze v oblasti SEO.",
+      "counter": "Soud nařídil znaleckou expertízu vozidla."
+    },
+    {
+      "key": "evidence ukazuje (ve významu důkazy)",
+      "rx": "\\bevidenc\\w*\\s+(ukazuj|naznačuj|svědč|potvrzuj|doklád|dokazuj|podporuj)\\w*|\\b(vědeck|empirick|anekdotick|siln|slab|přesvědčiv)\\w*\\s+evidenc\\w*",
+      "label": "evidence ukazuje (ve významu důkazy) (the evidence shows / suggests)",
+      "probe": "Vědecká evidence ukazuje opak.",
+      "counter": "Evidence zboží ukazuje stav skladu."
+    },
+    {
+      "key": "cestovní mapa (projektu, reformy)",
+      "rx": "\\bcestovn\\w*\\s+map\\w*\\s+(projekt|rozvoj|transformac|digitalizac|výzkum|reform|strateg|vývoj|produkt|změn|dekarbonizac|implementac|zavedení|přechod)",
+      "label": "cestovní mapa (projektu, reformy) (road map)",
+      "probe": "Vláda schválila cestovní mapu digitalizace.",
+      "counter": "Cestovní mapu Evropy koupíte na pumpě."
+    },
+    {
+      "key": "vitální role / součást",
+      "rx": "\\bvitáln\\w*\\s+(role|roli|rolí|součást|význam|důležitost|zájm|otázk|krok|funkc|prv[eko]k?\\w*|pro)\\b|\\b(je|jsou|bylo|byl|byla|bude)\\s+vitáln\\w*\\s*,?\\s*(aby|že)\\b",
+      "label": "vitální role / součást (vital role / part)",
+      "probe": "Rychlost načítání hraje vitální roli.",
+      "counter": "Babička je na svůj věk velmi vitální."
+    },
+    {
+      "key": "přístroj míří na náročné posluchače",
+      "rx": "\\b(míř|cíl)\\w*\\s+(hlavně\\s+|především\\s+|zejména\\s+)?na\\s+(náročn|běžn|uživatel|zákazník|hráč|lid|ty,|posluchač|rodin|začáteč|profesionál|fanoušk|majitel|firm|domácnost|studen|senior|děti|místa)",
+      "label": "přístroj míří na náročné posluchače (is aimed at / targets)",
+      "probe": "Tento přístroj míří na náročné posluchače.",
+      "counter": "Šipka míří na sever a puška na terč."
+    },
+    {
+      "key": "klíčové je vědět",
+      "rx": "\\bklíčov\\w+\\s+je\\s+(vědět|mít|pochopit|zjistit|ověřit|si|správn\\w*|zvolit|vybrat|nastavit|aby|,)|\\bje\\s+(to\\s+)?klíčov[éáý]\\s*(,|\\.|pro\\b|ve?\\b)",
+      "label": "klíčové je vědět (it's key to (know))",
+      "probe": "Aktivní řízení je klíčové ve třech oblastech.",
+      "counter": "Klíčové slovo je v titulku i v nadpisu."
+    },
+    {
+      "key": "zvukový zážitek",
+      "rx": "\\b(zvukov|poslechov|audio)\\w*\\s+(zážit|prožit)\\w*",
+      "label": "zvukový zážitek (audio / listening experience)",
+      "probe": "Starší reproduktor dokáže zvukový zážitek okamžitě pozvednout.",
+      "counter": "Koncert byl pro nás silný zážitek."
+    },
+    {
+      "key": "jazyk prostředí pokrývá angličtinu",
+      "rx": "\\bpokrýv\\w*\\s+(\\w+\\s+)?(angličtin|češtin|němčin|slovenštin|polštin|jazyk|\\d+\\s+jazyk)",
+      "label": "jazyk prostředí pokrývá angličtinu (covers English and German)",
+      "probe": "Jazyk uživatelského prostředí pokrývá angličtinu a němčinu.",
+      "counter": "Signál Wi-Fi pokrývá celý byt."
+    },
+    {
+      "key": "jede na Matteru",
+      "rx": "\\bjed(e|ou)\\s+(přes|na)\\s+(Matter|Thread|Wi-?Fi|Zigbee|Bluetooth|Android|Linux|iOS)\\w*",
+      "label": "jede na Matteru (runs on Matter / Thread)",
+      "probe": "Eve Thermo za 2 239 Kč jede na Matteru přes Thread.",
+      "counter": "Vlak jede na Brno přes Havlíčkův Brod."
+    },
+    {
+      "key": "je relevantní pro",
+      "rx": "\\brelevantn\\w*\\s+pro\\b(?!\\s+(dotaz|vyhledáv|klíčov|Google|uživatelsk\\w*\\s+dotaz))",
+      "label": "je relevantní pro (is relevant for)",
+      "probe": "Aktivní řízení může být relevantní pro domy, které o fotovoltaice uvažují.",
+      "counter": "Stránka je relevantní pro dotaz a Google ji řadí vysoko."
+    },
+    {
+      "key": "získává na významu / získává využití",
+      "rx": "\\bzískáv\\w*\\s+(na\\s+význam\\w*|(širší\\s+|nové\\s+)?využití)",
+      "label": "získává na významu / získává využití (gains importance / gains wider use)",
+      "probe": "Téma aktivní spotřeby získává na významu.",
+      "counter": "Firma získává nové zákazníky."
+    },
+    {
+      "key": "větší sourozenec (o modelu)",
+      "rx": "\\b(?!star|mlad)\\w+(ší|šího|šímu|ších|ším)\\s+sourozen\\w*|\\b(představen|nov|nejnov|poslední)\\w*\\s+sourozen\\w*|\\bsourozen\\w*\\s+(z\\s+(této|téže|stejné)\\s+(řady|rodiny)|s\\s+označením)",
+      "label": "větší sourozenec (o modelu) (bigger / pricier sibling)",
+      "probe": "Větší sourozenec má 229 ppi, takže písmo je hrubší.",
+      "counter": "Její starší sourozenec studuje v Brně."
+    },
+    {
+      "key": "audio společník",
+      "rx": "\\b(audio|zvukov|hudebn|cestovn|ideáln|stylov|odoln|kapesn|každodenn|dokonal)\\w*\\s+společní\\w*",
+      "label": "audio společník (audio / travel companion)",
+      "probe": "Tenhle kousek je ideální společník na cesty.",
+      "counter": "Pes je věrný společník a hlídá dům."
+    },
+    {
+      "key": "32 GB tvoří strop",
+      "rx": "\\b(tvoř\\w*|představuj\\w*)\\s+strop\\b|\\bstrop\\s+(klesá|stoupá|se\\s+zvedá)|\\bklesá\\s+strop",
+      "label": "32 GB tvoří strop (is the ceiling / cap)",
+      "probe": "32 gigabajtů interní paměti tvoří strop.",
+      "counter": "Cenový strop na energie schválila vláda."
+    },
+    {
+      "key": "čísla sedí (= vyplatí se)",
+      "rx": "\\bčísla\\s+sedí\\s+(u|pro|jen|hlavně|spíš|teprve)\\b",
+      "label": "čísla sedí (= vyplatí se) (the numbers add up)",
+      "probe": "Verdikt: čísla sedí u dražších motorů.",
+      "counter": "Čísla sedí na korunu."
+    },
+    {
+      "key": "přináší pohodlí",
+      "rx": "\\bpřináš\\w*\\s+(pohodlí|komfort|flexibilit\\w*|klid\\s+na\\s+duši)",
+      "label": "přináší pohodlí (brings convenience / peace of mind)",
+      "probe": "Bezdrátová varianta přináší pohodlí a čistý vzhled.",
+      "counter": "Pošťák přináší balík každé ráno."
+    },
+    {
+      "key": "čistý design",
+      "rx": "\\bčist\\w*\\s+(design|vzhled\\w*|lini\\w*)",
+      "label": "čistý design (clean design / clean lines)",
+      "probe": "Bez kabelů má sestava čistý design.",
+      "counter": "Čistý ručník visí v koupelně."
+    },
+    {
+      "key": "Uživatelé mohou",
+      "rx": "(?:^|[.!?]\\s+)Uživatelé\\s+(mohou|můžou|si\\s+mohou)\\b",
+      "label": "Uživatelé mohou (users can)",
+      "probe": "Klávesnice je malá. Uživatelé mohou zkusit i psaní palci.",
+      "counter": "Uživatelé si stěžovali na baterii."
+    },
+    {
+      "key": "následovně (uvozuje výčet)",
+      "rx": "\\bnásledovně\\s*:|\\b(je|jsou|vypadá|vypadají|funguje|fungují|zní|probíhá|postupujte|postupuje)\\s+následovně\\b",
+      "label": "následovně (uvozuje výčet) (as follows)",
+      "probe": "Postup je následovně: otevřete aplikaci.",
+      "counter": "Následující den přišla aktualizace."
+    },
+    {
+      "key": "jsou následující:",
+      "rx": "\\b(je|jsou|byl[ayio]?|budou)\\s+následující\\s*:",
+      "label": "jsou následující: (are the following)",
+      "probe": "Nejdůležitější vlastnosti jsou následující: výdrž a váha.",
+      "counter": "Následující model vyjde v březnu."
+    },
+    {
+      "key": "následovný postup / následujícně",
+      "rx": "\\bnásledovn(ý|á|é|ého|ém|ou|ých|ým|ými|í)\\b|\\bnásledujícně\\b",
+      "label": "následovný postup / následujícně (the following)",
+      "probe": "Doporučujeme následovný postup.",
+      "counter": "Je to jeho následovník."
+    },
+    {
+      "key": "eventuálně (= nakonec)",
+      "rx": "\\beventuálně\\s+(se\\s+)?\\w+(l|la|lo|li|ly)\\b",
+      "label": "eventuálně (= nakonec) (eventually)",
+      "probe": "Firma eventuálně ustoupila a cenu snížila.",
+      "counter": "Napište nám, eventuálně zavolejte."
+    },
+    {
+      "key": "kontrolovat osvětlení (= ovládat)",
+      "rx": "\\bkontrol\\w*\\s+(\\w+\\s+)?(osvětlení|světl\\w*|žaluzi\\w*|rolet\\w*|hlasitost\\w*|přehrávání|krevní\\s+tlak)|\\bkontrol\\w*\\s+(\\w+\\s+){0,3}hlasem\\b",
+      "label": "kontrolovat osvětlení (= ovládat) (to control)",
+      "probe": "Aplikace umí kontrolovat osvětlení v celém bytě.",
+      "counter": "Před cestou zkontrolujte tlak v pneumatikách."
+    },
+    {
+      "key": "virtuálně žádný (= prakticky)",
+      "rx": "\\bvirtuáln[ěe]\\s+(žádn|neexist|všech|každ|stejn|nemožn|nulov|nikdo|nic\\b)",
+      "label": "virtuálně žádný (= prakticky) (virtually no / all)",
+      "probe": "Rozdíl je virtuálně žádný.",
+      "counter": "Virtuální realita je zatím drahá."
+    },
+    {
+      "key": "seriózní problém (= vážný)",
+      "rx": "\\bseriózn\\w*\\s+(problém|zranění|chyb|hrozb|nemoc|onemocnění|potíž|nedostat|rizik|poškození|vad)",
+      "label": "seriózní problém (= vážný) (serious problem)",
+      "probe": "Přehřívání je seriózní problém.",
+      "counter": "Seriózní obchod vystaví fakturu."
+    },
+    {
+      "key": "telefon přichází s (= obsahuje)",
+      "rx": "\\b(telefon|tablet|model|zařízení|čtečk|hodink|sluchátk|notebook|router|systém|balení|aplikac|verz|robot|vysavač|televiz|monitor|reproduktor|kamer)\\w*\\s+(\\w+\\s+){0,2}přichází\\s+(s|se)\\b",
+      "label": "telefon přichází s (= obsahuje) (comes with)",
+      "probe": "Tablet přichází se stylusem v balení.",
+      "counter": "Firma přichází s novinkou."
+    },
+    {
+      "key": "Pro otevření souboru, klikněte",
+      "rx": "(?:^|[.!?]\\s+)Pro\\s+\\w+(ní|tí)\\b[^.]{0,60},\\s+(\\w+\\s+)?(klikn|stiskn|vyber|zadej|otevř|podrž|přejd|zvol|nastav)\\w*|\\b(?:stiskn|klikn|použij|zmáčkn|podrž)\\w*\\s+(?!na\\b)(?:\\S+\\s+)?pro\\s+(?:otevření|zobrazení|spuštění|zavření|uložení|vypnutí|zapnutí|přepnutí)\\b",
+      "label": "Pro otevření souboru, klikněte (To open the file, click)",
+      "probe": "Pro otevření souboru, dvakrát klikněte na ikonu.",
+      "counter": "Pro otevření souboru stačí dvakrát kliknout."
+    },
+    {
+      "key": "mnohem komplexnější (= složitější)",
+      "rx": "\\b(mnohem|daleko|příliš|velmi|docela|dost|o\\s+dost)\\s+komplexn\\w*|\\bkomplexn\\w*\\s+(problém|situac|otázk)",
+      "label": "mnohem komplexnější (= složitější) (far more complex)",
+      "probe": "Situace je mnohem komplexnější.",
+      "counter": "Nabízí komplexní řešení pro firmy."
+    },
+    {
+      "key": "shledat jako nemožné",
+      "rx": "\\bshled\\w*\\s+(\\w+\\s+){0,2}jako\\s+\\w+",
+      "label": "shledat jako nemožné (to find it (impossible))",
+      "probe": "Ovládání jsem shledala jako téměř nemožné.",
+      "counter": "Shledali jsme se po letech."
+    },
+    {
+      "key": "referovat k",
+      "rx": "\\brefer(ov|uj)\\w*\\s+(k|ke)\\b",
+      "label": "referovat k (to refer to)",
+      "probe": "Článek referuje k původní studii.",
+      "counter": "Referoval o výsledcích testu."
+    },
+    {
+      "key": "exekuce kódu",
+      "rx": "\\bexekuc\\w*\\s+(kódu|příkaz|skript|program|úloh|dotaz)",
+      "label": "exekuce kódu (code execution)",
+      "probe": "Chyba umožňuje exekuci kódu na dálku.",
+      "counter": "Exekuce na plat dlužníka."
+    },
+    {
+      "key": "poslední dekáda (= desetiletí)",
+      "rx": "\\b(poslední|uplynul|minul|celou|celé|příští|následující|první|druhé)\\w*\\s+dekád\\w*|\\bdekád\\w*\\s+(let|zpátky|zpět)",
+      "label": "poslední dekáda (= desetiletí) (decade)",
+      "probe": "Za poslední dekádu ceny vzrostly.",
+      "counter": "Desetiletí trvalo, než se to změnilo."
+    },
+    {
+      "key": "adresovat problém",
+      "rx": "\\badres\\w*\\s+(\\w+\\s+)?(problém|výzv|obav|potřeb|nedostat|bolest|slabin)",
+      "label": "adresovat problém (to address an issue)",
+      "probe": "Aktualizace adresuje problém s baterií.",
+      "counter": "Dopis adresoval starostovi."
+    },
+    {
+      "key": "dává to logiku",
+      "rx": "\\bdáv\\w*\\s+(to\\s+)?logiku",
+      "label": "dává to logiku ((kontaminace make sense / mít logiku))",
+      "probe": "Dává to logiku, když se podíváte na ceny.",
+      "counter": "Má to svou logiku."
+    },
+    {
+      "key": "lehký jogurt (= light)",
+      "rx": "\\blehk\\w*\\s+(jogurt|sýr|smetan|majonéz|tvaroh|limonád|cola|kol[auy]\\b|zakysan)",
+      "label": "lehký jogurt (= light) (light)",
+      "probe": "Do salátu dejte lehký jogurt.",
+      "counter": "Lehký stan se vejde do batohu."
+    },
+    {
+      "key": "subjekt fotografie (= motiv)",
+      "rx": "\\bsubjekt\\w*\\s+(fotografi|snímk|focení|záběr)|\\b(ideáln|vhodn)\\w*\\s+subjekt\\w*",
+      "label": "subjekt fotografie (= motiv) (subject)",
+      "probe": "Kočka je ideální subjekt pro focení.",
+      "counter": "Daňový subjekt podává přiznání."
+    },
+    {
+      "key": "ultimátní (= nejlepší)",
+      "rx": "\\bultimátn\\w*",
+      "label": "ultimátní (= nejlepší) (ultimate)",
+      "probe": "Ultimátní sluchátka pro audiofily.",
+      "counter": "Ultimátum vypršelo v pondělí."
+    },
+    {
+      "key": "nastavení žijí v souboru",
+      "rx": "\\b(soubor|data|nastavení|aplikac|záložk|fotk|fotografi|dokument|kód|repozitář|ikon|zálohy)\\w*\\s+(\\w+\\s+)?(žij[eí]|žil[aoiy]?)\\s+(v|ve|na)\\b",
+      "label": "nastavení žijí v souboru (lives in (a file, the cloud))",
+      "probe": "Všechna nastavení žijí v jednom souboru.",
+      "counter": "Rodina žije v Brně."
+    },
+    {
+      "key": "nákladový motor",
+      "rx": "\\bnákladov\\w*\\s+motor\\w*",
+      "label": "nákladový motor (cost driver)",
+      "probe": "Energie jsou hlavní nákladový motor.",
+      "counter": "Motor auta má 110 kW."
+    },
+    {
+      "key": "na denní bázi",
+      "rx": "\\bna\\s+(denní|týdenní|měsíční|roční|čtvrtletní|pravidelné|každodenní|dlouhodobé|průběžné)\\s+bázi\\b",
+      "label": "na denní bázi (on a daily basis)",
+      "probe": "Data aktualizujeme na denní bázi.",
+      "counter": "Barva je na vodní bázi."
+    },
+    {
+      "key": "firma je v problémech",
+      "rx": "\\b(je|jsou|byl[aoiy]?|bude|budou|ocitl\\w*\\s+se)\\s+v\\s+problémech\\b",
+      "label": "firma je v problémech (to be in trouble)",
+      "probe": "Výrobce je v problémech kvůli dluhům.",
+      "counter": "V problémech s baterií pomůže reset."
+    },
+    {
+      "key": "na konci dne (= nakonec)",
+      "rx": "(?:^|[.!?]\\s+)Na\\s+konci\\s+dne\\s*,|\\bna\\s+konci\\s+dne\\s+(jde|je\\s+to|rozhoduj\\w*|záleží|platí|stejně)",
+      "label": "na konci dne (= nakonec) (at the end of the day)",
+      "probe": "Na konci dne, rozhoduje cena.",
+      "counter": "Na konci dne zapadá slunce za kopec."
+    },
+    {
+      "key": "Jste si jisti, že chcete",
+      "rx": "\\bJste\\s+si\\s+jist(í|i|ý|á)\\s*,?\\s+že\\s+(chcete|si\\s+přejete)",
+      "label": "Jste si jisti, že chcete (Are you sure you want…?)",
+      "probe": "Jste si jisti, že chcete soubor smazat?",
+      "counter": "Jste si jistí svou volbou."
+    },
+    {
+      "key": "Přečtěte si více",
+      "rx": "\\bPřečtěte\\s+si\\s+víc(e)?\\b(?!\\s+(o|než))",
+      "label": "Přečtěte si více (Read more / Learn more)",
+      "probe": "Přečtěte si více na webu výrobce.",
+      "counter": "Přečtěte si víc o baterii v recenzi."
+    },
+    {
+      "key": "kruciální",
+      "rx": "\\bkruciáln\\w*",
+      "label": "kruciální (crucial)",
+      "probe": "Chlazení je pro výkon kruciální.",
+      "counter": "Krucifix visí na zdi."
+    },
+    {
+      "key": "signaturní design / jídlo",
+      "rx": "\\bsignaturn\\w*",
+      "label": "signaturní design / jídlo (signature (dish, design))",
+      "probe": "Telefon si zachoval signaturní design.",
+      "counter": "Signatura knihy je na hřbetu."
+    },
+    {
+      "key": "kompetice (= soutěž, konkurence)",
+      "rx": "\\bkompetic\\w*",
+      "label": "kompetice (= soutěž, konkurence) (competition)",
+      "probe": "Na trhu je velká kompetice.",
+      "counter": "Kompetence úřadu jsou omezené."
+    },
+    {
+      "key": "orchestrovat služby",
+      "rx": "\\borchestr(ov|uj)\\w*\\s+(\\w+\\s+){0,2}(služb|proces|trh|tým|dat|kampan|agent|systém|úloh|zařízení)",
+      "label": "orchestrovat služby (to orchestrate)",
+      "probe": "Brána umí orchestrovat celou domácnost zařízení.",
+      "counter": "Skladatel orchestroval symfonii pro velký orchestr."
+    },
+    {
+      "key": "designérská kolaborace",
+      "rx": "\\b(designérsk|módní|limitovan|společn|exkluzivn|nov)\\w*\\s+kolaborac\\w*|\\bkolaborac\\w*\\s+(se\\s+)?značk",
+      "label": "designérská kolaborace (collaboration (brand collab))",
+      "probe": "Nová kolaborace se značkou Nike vyjde v pátek.",
+      "counter": "Kolaborace s okupanty byla trestná."
+    },
+    {
+      "key": "diseminace výsledků",
+      "rx": "\\bdiseminac\\w*",
+      "label": "diseminace výsledků (dissemination)",
+      "probe": "Projekt počítá s diseminací výsledků.",
+      "counter": "Disertace vyšla knižně."
+    },
+    {
+      "key": "aplikovat na pozici",
+      "rx": "\\baplikov\\w*\\s+(se\\s+)?na\\s+(pozic|místo|prác|nabídk|stáž)",
+      "label": "aplikovat na pozici (to apply for a job)",
+      "probe": "Kdo chce aplikovat na pozici, pošle CV.",
+      "counter": "Nátěr aplikujte na suchý povrch."
+    },
+    {
+      "key": "skvělá zkušenost (= zážitek)",
+      "rx": "\\b(skvěl|úžasn|nezapomenuteln|neuvěřiteln|jedinečn|fantastick|parádn)\\w*\\s+zkušenost\\w*",
+      "label": "skvělá zkušenost (= zážitek) (a great experience)",
+      "probe": "Poslech byl úžasná zkušenost.",
+      "counter": "Má s tím dlouholetou zkušenost."
+    },
+    {
+      "key": "věc je, že",
+      "rx": "(?:^|[.!?]\\s+)Věc\\s+je\\s*,?\\s+že\\b",
+      "label": "věc je, že (the thing is…)",
+      "probe": "Věc je, že baterie nevydrží.",
+      "counter": "Ta věc je drahá, ale dobrá."
+    },
+    {
+      "key": "je to, co to je",
+      "rx": "\\bje\\s+to\\s*,?\\s+co\\s+to\\s+je\\b",
+      "label": "je to, co to je (it is what it is)",
+      "probe": "Cena je vysoká, ale je to, co to je.",
+      "counter": "Nevím, co to je za zvuk."
+    },
+    {
+      "key": "čelit realitě",
+      "rx": "\\bčel\\w*\\s+(realit\\w*|skutečnost\\w*|fakt\\w*|pravd\\w*)",
+      "label": "čelit realitě (to face reality)",
+      "probe": "Proč nedokážeš čelit realitě?",
+      "counter": "Firma čelí kritice zákazníků."
+    },
+    {
+      "key": "zněl zklamaně",
+      "rx": "\\bzn(í|ěl[aoiy]?)\\s+(zklamaně|udiveně|nadšeně|překvapeně|unaveně|nejistě|naštvaně|smutně|vesele|ustaraně|nervózně|rozzlobeně)",
+      "label": "zněl zklamaně (he sounded disappointed)",
+      "probe": "Ralph zněl zklamaně.",
+      "counter": "Reproduktor zní čistě a argument zní přesvědčivě."
+    },
+    {
+      "key": "kořenové příčiny",
+      "rx": "\\bkořenov\\w+\\s+příčin\\w*",
+      "label": "kořenové příčiny (root causes)",
+      "probe": "Hledáme kořenové příčiny výpadků.",
+      "counter": "Kořenová zelenina je zdravá."
+    },
+    {
+      "key": "přinese přidanou hodnotu",
+      "rx": "\\b(přin\\w*|nabíz\\w*|nabídn\\w*|dodá\\w*)\\s+(\\w+\\s+){0,2}přidan\\w+\\s+hodnot\\w*",
+      "label": "přinese přidanou hodnotu (adds value / brings added value)",
+      "probe": "Aplikace přináší uživatelům přidanou hodnotu.",
+      "counter": "Daň z přidané hodnoty činí 21 %."
+    },
+    {
+      "key": "stále více důležitější",
+      "rx": "\\b(stále|čím\\s+dál\\w*)\\s+(tím\\s+)?víc(e)?\\s+\\w+(ějš|ejš|š)(í|ího|ímu|ím|ími|ích)\\b",
+      "label": "stále více důležitější (more and more important)",
+      "probe": "Indie je stále více důležitějším partnerem.",
+      "counter": "Stále více lidí kupuje elektromobily."
+    },
+    {
+      "key": "považovat jako",
+      "rx": "\\bpovaž(ov|uj)\\w*\\s+(se\\s+|ho\\s+|ji\\s+|je\\s+|to\\s+)?jako\\s+",
+      "label": "považovat jako (to consider as)",
+      "probe": "Tablet považujeme jako náhradu notebooku.",
+      "counter": "Považuji ho stejně jako ty za génia."
+    },
+    {
+      "key": "outdoor kamera",
+      "rx": "\\boutdoor\\s+(aktivit|trénink|kamer|nábytek|nábytk|kuchyň|kuchyn|svítidl|světl|osvětlen|zásuvk|reprodukt|sezen|gril|zón|použit|prostor|vybaven)\\w*",
+      "label": "outdoor kamera (outdoor camera / activities)",
+      "probe": "Outdoor kamera vydrží déšť i mráz.",
+      "counter": "Outdoorové vybavení koupíte v Decathlonu."
+    },
+    {
+      "key": "patetický (= ubohý)",
+      "rx": "\\bpatetick\\w*\\s+(pokus|výkon|výsledek|výsledk|výdrž|výmluv|baterii|cen|chyb)\\w*|\\bje\\s+(to\\s+)?(prostě\\s+)?patetick\\w*",
+      "label": "patetický (= ubohý) (pathetic)",
+      "probe": "Výdrž baterie je prostě patetická.",
+      "counter": "Patetický proslov dojal celý sál."
+    },
+    {
+      "key": "kid-friendly / pet-friendly",
+      "rx": "\\b(kid|kids|pet|eco|family|student|budget|baby|dog|seo|mobile|bike|travel)[- ]friendly\\b",
+      "label": "kid-friendly / pet-friendly (kid-friendly, pet-friendly, eco-friendly)",
+      "probe": "Hotel je pet-friendly a psa vezmete s sebou.",
+      "counter": "Rozhraní je uživatelsky přívětivé."
+    },
+    {
+      "key": "must-have doplněk",
+      "rx": "\\bmust[- ]have\\b",
+      "label": "must-have doplněk (a must-have)",
+      "probe": "Tohle je must-have doplněk do každé kuchyně.",
+      "counter": "Tohle je nezbytný doplněk do kuchyně."
+    },
+    {
+      "key": "chill-out zóna",
+      "rx": "\\bchill[- ]?out\\s+zón\\w*",
+      "label": "chill-out zóna (chill-out zone)",
+      "probe": "Na balkoně vznikla chill-out zóna.",
+      "counter": "Na balkoně vznikl koutek na odpočinek."
+    },
+    {
+      "key": "adults only hotel",
+      "rx": "\\badults?[- ]only\\s+(hotel|resort|pláž|zón|bazén)\\w*",
+      "label": "adults only hotel (adults-only hotel)",
+      "probe": "Vybrali jsme adults only hotel na Krétě.",
+      "counter": "Hotel je jen pro dospělé."
+    }
+  ],
+  "generic": {
+    "_comment": "Zobecněný vzor: fyzické/pohybové sloveso s abstraktním podmětem. Chytá i kalky, které v seznamu výše ještě nejsou. Varování, ne tvrdé porušení - falešné poplachy jsou očekávané.",
+    "abstract": "výhod|nevýhod|úspor|problém|mechanik|rozdíl|princip|kouzl|síl|hodnot|rezerv|jádr|point|důvod|smysl|klíč|těžišt|potenciál|rizik|tajemstv|zisk|podstat|přínos|slab(in|ost)|kvalit|nevýhod",
+    "verbs": "lež|stoj[íi]|sed[íne]|nes(e|ou|l)|běž|žene|žen(ou)|míří|spočív|táhn|krá[čč]",
+    "label": "abstraktní podmět s fyzickým slovesem (typický vzor kalku)"
+  },
+  "antithesis": {
+    "rx": "[^.!?]{4,60},\\s+(?:ne|nikoli|nikoliv)\\s+[^.!?]{3,50}[.!?]",
+    "label": "antiteze „A, ne B\""
+  },
+  "demonstrative": {
+    "_comment": "Věta začínající ukazovacím zájmenem je doslovný převod anglického „This model…“. Vadí, až když se hromadí, proto se počítá na celý text a hlásí se až nad prahem, jen jako varování. Ve finálních verzích 174 redakčních článků (říjen 2025 až říjen 2026) překročily práh čtyři. Regex je bez re.I, chytá jen začátek věty.",
+    "rx": "(?:^|[.!?…][\"“”)]?\\s+)((?:Tento|Tato|Toto|Tyto|Tito)\\b(?:\\s+[^\\s.!?…]+){0,4})",
+    "max": 2,
+    "label": "věty začínající „Tento/Tato/Toto“ (z „This …“)",
+    "fix": "začni podstatným jménem („Model…“), zájmenem „ten/takový“, nebo zájmeno vynech",
+    "probe": "Router stojí 2 000 Kč. Tento model zvládne Wi-Fi 7.",
+    "counter": "Model zvládne Wi-Fi 7 a v tento den vyjde aktualizace."
+  }
+}

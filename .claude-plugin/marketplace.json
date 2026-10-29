@@ -1,0 +1,14 @@
+{
+  "name": "kalky",
+  "owner": {
+    "name": "Zdeněk Dvořák",
+    "url": "https://linki.cz/"
+  },
+  "plugins": [
+    {
+      "name": "kalky",
+      "source": "./",
+      "description": "Kalky z angličtiny, bohemizmy a AI obraty v českém a slovenském textu."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "_comment": "Bohemizmy: ceska interference ve slovenstine. Hleda se BEZ re.I (vzor na ceska pismena je psany malymi pismeny, aby prosla ceska vlastni jmena), varianty velikosti jsou primo v regexu. Kazdy zaznam ma rx, fix a probe (veta, ktera MUSI padnout).",
+  "_source": "Zdroj: kuzmany/slovak-humanizer, soubor bohemizmy.md (MIT, (c) 2026 Zdeno Kuzmany). Prevzata je podmnozina relevantni pro web o byvani a domacnosti - vypusteny jsou polozky jako rohlík, poklopec, fena, cop. Prvni vzor je nejcennejsi: slovencina nezna e s hackem, r s hackem ani u s krouzkem, takze kazdy vyskyt je jisty nalez. Zamerne matchuje jen slova psana cele malymi pismeny, aby ceska vlastni jmena (Dvořák, Jiří) prosla.",
+  "bohemisms": [
+    {
+      "rx": "\\b[a-záäčďéíĺľňóôŕšťúýž]*[ěřů][a-záäčďéíĺľňóôŕšťúýž]*\\b",
+      "fix": "české písmeno (ě/ř/ů), slovenčina ho nemá",
+      "probe": "Táto věta má české písmeno."
+    },
+    {
+      "rx": "\\b[Dd]oporuč\\w*",
+      "fix": "odporúčať / odporúčanie",
+      "probe": "Výrobca doporučuje pravidelné čistenie."
+    },
+    {
+      "rx": "\\b[Pp]rehlasov\\w*",
+      "fix": "vyhlasovať",
+      "probe": "Prehlasovali ho na schôdzi."
+    },
+    {
+      "rx": "\\b[Dd]oprevádz\\w*",
+      "fix": "sprevádzať",
+      "probe": "Doprevádzal ju až domov."
+    },
+    {
+      "rx": "\\b[Oo]bdrž\\w*",
+      "fix": "dostať",
+      "probe": "Obdržali sme balík včas."
+    },
+    {
+      "rx": "\\b(?!\\w*(?:[Kk]rátk|[Ll]átk|[Zz]átk))\\w+átk[oaui]\\w*\\b",
+      "fix": "český sufix -átko → -adlo (lehátko → ležadlo)",
+      "probe": "Kúpili sme nové lehátko na terasu."
+    },
+    {
+      "rx": "\\b(?!\\w*[Šš]títk)\\w+ítk[oaui]\\w*\\b",
+      "fix": "český sufix -ítko → -idlo (tlačítko → tlačidlo)",
+      "probe": "Stlačte tlačítko na boku."
+    },
+    {
+      "rx": "\\b[Tt]ady\\b",
+      "fix": "tu",
+      "probe": "Tady nájdete návod."
+    },
+    {
+      "rx": "\\b[Dd]neska\\b",
+      "fix": "dnes",
+      "probe": "Dneska prišla zásielka."
+    },
+    {
+      "rx": "\\b[Zz]ítra\\b",
+      "fix": "zajtra",
+      "probe": "Zítra to bude hotové."
+    },
+    {
+      "rx": "\\b[Aa]čkoli\\w*\\b",
+      "fix": "hoci",
+      "probe": "Ačkoli je drahší, oplatí sa."
+    },
+    {
+      "rx": "\\b[Nn]eboť\\b",
+      "fix": "lebo",
+      "probe": "Neboť bez filtra to nejde."
+    },
+    {
+      "rx": "\\b[Kk]dyby\\b",
+      "fix": "keby",
+      "probe": "Kdyby ste mali čas, ozvite sa."
+    },
+    {
+      "rx": "\\b[Jj]aksi\\b",
+      "fix": "akosi",
+      "probe": "Jaksi to nefunguje."
+    },
+    {
+      "rx": "\\b[Zz]ávad\\w*",
+      "fix": "chyba / porucha",
+      "probe": "Závada sa ukázala po týždni."
+    },
+    {
+      "rx": "\\b[Kk]ojen(ec|c\\w+)\\b",
+      "fix": "dojča",
+      "probe": "Kojenci potrebujú pokoj."
+    },
+    {
+      "rx": "\\b[Ll]ímec\\w*",
+      "fix": "golier",
+      "probe": "Límec košele je úzky."
+    },
+    {
+      "rx": "\\b[Pp]rádl\\w*",
+      "fix": "bielizeň",
+      "probe": "Prádlo sušte na vzduchu."
+    },
+    {
+      "rx": "\\b[Kk]ufr\\w*",
+      "fix": "kufor",
+      "probe": "Do kufru sa zmestí veľa."
+    },
+    {
+      "rx": "\\b[Pp]omazánk\\w*",
+      "fix": "nátierka",
+      "probe": "Pomazánka z avokáda je rýchla."
+    },
+    {
+      "rx": "\\b[Rr]azítk\\w*",
+      "fix": "pečiatka",
+      "probe": "Razítko chýba."
+    },
+    {
+      "rx": "\\b[Jj]ednat\\b|\\bjednalo\\s+sa\\s+o\\b",
+      "fix": "konať / rokovať; „išlo o“",
+      "probe": "Jednat treba rýchlo."
+    },
+    {
+      "rx": "\\b[Mm]lsn[ýáé]\\w*",
+      "fix": "maškrtný",
+      "probe": "Mlsný pes všetko zje."
+    },
+    {
+      "rx": "\\bzúčastniť\\s+sa\\s+na\\b",
+      "fix": "zúčastniť sa + genitív (bez „na“)",
+      "probe": "Môžete sa zúčastniť sa na súťaži."
+    },
+    {
+      "rx": "\\bobstaráva\\w*\\b",
+      "fix": "starať sa o / zabezpečovať (obstarávať = procurement)",
+      "probe": "Robot obstaráva upratovanie sám."
+    },
+    {
+      "rx": "\\brecesia\\b(?!\\s*(mien|hospodárstv|ekonom))",
+      "fix": "vtip / recesistický nápad (recesia = ekonomický pokles)",
+      "probe": "Bola to len recesia kamarátov."
+    },
+    {
+      "rx": "\\bdn[ií]\\s+v\\s+rade\\b",
+      "fix": "dni po sebe / za sebou (české „dny v řadě“)",
+      "probe": "Svieti tri dni v rade."
+    },
+    {
+      "rx": "\\b[Nn]apoprv[eé]\\b",
+      "fix": "na prvý raz / hneď na prvý pokus (české „napoprvé“)",
+      "probe": "Napoprvé sa to nepodarilo."
+    },
+    {
+      "rx": "\\b[Tt]užkov\\w*",
+      "fix": "ceruzkový (batéria AA)",
+      "probe": "Potrebuje tužkové batérie."
+    },
+    {
+      "rx": "(nedá sa|sa nedá) vyčítať",
+      "fix": "nie je jasné / sa nedá zistiť",
+      "probe": "Z grafu sa nedá vyčítať trend."
+    },
+    {
+      "rx": "\\b[Bb]ezkartáč\\w*",
+      "fix": "bezuhlíkový / bezkefový motor (české „bezkartáčový“, 2026-10-29)",
+      "probe": "Má bezkartáčový motor."
+    }
+  ]
+}

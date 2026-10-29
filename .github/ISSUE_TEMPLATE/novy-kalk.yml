@@ -1,0 +1,57 @@
+name: Nový kalk nebo bohemizmus
+description: Navrhněte vazbu, která do seznamu chybí. Formulář můžete vyplnit sami, nebo ho za vás předvyplní agent.
+title: "Nový kalk: "
+labels: ["návrh"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do seznamu patří vazba, která je kalkem v každém kontextu. Stylová preference jednoho webu do něj nepatří. Než návrh odešlete, ověřte v `kalky.md`, že tam ještě není.
+  - type: input
+    id: jazyk
+    attributes:
+      label: Jazyk
+      description: cs nebo sk
+      placeholder: cs
+    validations:
+      required: true
+  - type: input
+    id: kalk
+    attributes:
+      label: Kalk
+      placeholder: výhoda spočívá v ceně
+    validations:
+      required: true
+  - type: input
+    id: original
+    attributes:
+      label: Anglický originál
+      description: U bohemizmu české slovo nebo tvar.
+      placeholder: the advantage lies in
+    validations:
+      required: true
+  - type: input
+    id: oprava
+    attributes:
+      label: Přirozená náhrada
+      placeholder: výhodou je cena
+    validations:
+      required: true
+  - type: input
+    id: veta
+    attributes:
+      label: Věta, ve které se kalk objevil
+      placeholder: Hlavní výhoda spočívá v ceně.
+    validations:
+      required: true
+  - type: input
+    id: protipriklad
+    attributes:
+      label: Protipříklad
+      description: Podobná věta, která v pořádku je a regex ji chytit nesmí.
+      placeholder: Klíč spočívá v zámku.
+  - type: input
+    id: regex
+    attributes:
+      label: Regex (nepovinný)
+      placeholder: \bvýhod\w*\s+spočív\w+

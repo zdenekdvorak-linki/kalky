@@ -1,0 +1,32 @@
+MIT License
+
+Copyright (c) 2026 Zdeno Kuzmany
+
+Slovak-humanizer is inspired by and derived in part from the structure of
+@blader/humanizer (https://github.com/blader/humanizer), also under MIT.
+The English humanizer is itself based on Wikipedia's "Signs of AI writing"
+guide (CC BY-SA 4.0).
+
+The rhetorical/structural anti-slop patterns (skills/slovak-humanizer/ai-tells.md
+sections M-Q and SKILL.md SECTION 4B) are adapted into Slovak from anti-ai-slop-cz
+(https://github.com/nowork-ai/anti-ai-slop-cz), Copyright (c) 2026 Filip Dřímalka,
+under MIT. All other Slovak-specific rules and content are original to this
+repository.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

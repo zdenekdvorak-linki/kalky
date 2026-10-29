@@ -1,0 +1,13 @@
+{
+  "name": "kalky",
+  "version": "1.0.0",
+  "description": "Najde v českém a slovenském textu kalky z angličtiny, bohemizmy a obraty, po kterých text zní jako AI. Ke každému nálezu dá přirozenou náhradu.",
+  "author": {
+    "name": "Zdeněk Dvořák",
+    "url": "https://linki.cz/"
+  },
+  "homepage": "https://github.com/zdenekdvorak-linki/kalky",
+  "repository": "https://github.com/zdenekdvorak-linki/kalky",
+  "license": "MIT",
+  "keywords": ["čeština", "slovenčina", "kalky", "korektura", "AI text"]
+}

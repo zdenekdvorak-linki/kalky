@@ -1,0 +1,23 @@
+# Kalky
+
+> Seznam kalků z angličtiny v češtině a slovenštině, bohemizmů ve slovenštině a obratů, po kterých text zní jako AI. Každé pravidlo má přirozenou náhradu, regex a testovací větu. Agent ho použije při psaní a kontrole textu a může navrhnout nový kalk.
+
+Pokyny pro agenty jsou v AGENTS.md. Každá odrážka v kalky.md má tvar: - „kalk" (z „anglický originál") → **„náhrada"**.
+
+## Pokyny
+
+- [AGENTS.md](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/AGENTS.md): jak seznam použít a jak navrhnout nový kalk (pull request nebo předvyplněné issue)
+- [SKILL.md](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/skills/kalky/SKILL.md): skill podle standardu Agent Skills, postup kontroly textu
+
+## Data
+
+- [České kalky](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/skills/kalky/data/cs/kalky.md): kalk, anglický originál, náhrada
+- [Slovenské kalky](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/skills/kalky/data/sk/kalky.md): totéž pro slovenštinu
+- [Bohemizmy](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/skills/kalky/data/sk/bohemismy.json): česká slova a tvary ve slovenském textu, regex a náhrada
+- [AI obraty](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/skills/kalky/data/ai-obraty.md): obraty, podle kterých čtenář pozná text od AI
+
+## Volitelné
+
+- [Regexy českých kalků](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/skills/kalky/data/cs/calques.json): strojová podoba seznamu včetně testovacích vět
+- [Kontrola textu](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/skills/kalky/scripts/check.py): Python 3.9+, jen standardní knihovna
+- [Jak přispět](https://raw.githubusercontent.com/zdenekdvorak-linki/kalky/main/CONTRIBUTING.md)
