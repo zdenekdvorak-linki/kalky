@@ -275,4 +275,8 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „dole leží číselník (prvek rozhraní leží/sedí)" (z „the keypad sits / lies at the bottom") → **„dole najdete číselník; dole je číselník; dole se nachází"**
 
+- „vývod sedí nízko u země" (z „the outlet sits low to the ground") → **„vývod je nízko u země"**
+
+- „sloupec nese štítkovou kapacitu" (z „the column carries the rated capacity") → **„sloupec uvádí štítkovou kapacitu"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

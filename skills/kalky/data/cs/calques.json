@@ -935,6 +935,20 @@
       "label": "dole leží číselník (prvek rozhraní leží/sedí) (the keypad sits / lies at the bottom)",
       "probe": "Dole leží číselník s písmeny pro psaní esemesek.",
       "counter": "Telefon leží na stole displejem dolů a dole leží i nabíječka."
+    },
+    {
+      "key": "vývod sedí nízko u země",
+      "rx": "\\b(?:vývod\\w*|výstup\\w*|otvor\\w*|hrdl\\w*|přípojk\\w*|zásuvk\\w*|nádrž\\w*|filtr\\w*|madl\\w*)\\s+(?:\\w+\\s+){0,2}?(?:ne)?sed[íi]\\s+(?:(?:nízko|vysoko|hluboko|mělko|vzadu|vpředu|vepředu|nahoře|dole|uprostřed|stranou|bokem)\\b|(?:těsně\\s+)?(?:u|pod|nad|za|vedle|při)\\s)",
+      "label": "vývod sedí nízko u země (the outlet sits low to the ground)",
+      "probe": "Vývod sedí nízko u země, takže odpad musí být ještě níž.",
+      "counter": "Při testech je klíčové, jak dobře filtr sedí a jak je utěsněná cesta vzduchu."
+    },
+    {
+      "key": "sloupec nese štítkovou kapacitu",
+      "rx": "\\b(?:sloupec|sloupc\\w+|řádek|řádk\\w+|tabulk\\w*|graf\\w*|os[ay]|legend\\w*|štítek|štítk\\w+)\\s+(?:\\w+\\s+){0,3}?(?:nese|nesou|neslo|nesl[ay]?)\\b",
+      "label": "sloupec nese štítkovou kapacitu (the column carries the rated capacity)",
+      "probe": "Sloupec s litry nese štítkovou kapacitu.",
+      "counter": "Sloup nese střechu přístřešku."
     }
   ],
   "generic": {

@@ -146,10 +146,24 @@ tutéž věc. Zopakuj název nebo druh přístroje, případně použij zájmeno
 - ✗ „BADKRUKA je černá krychle… Kolik krychle dá watů, IKEA neuvádí."
 - ✓ „BADKRUKA je černý reproduktor… Kolik dá watů, IKEA neuvádí."
 
+## 9. Autor obhajuje vlastní číslo
+
+Model vytuší, že údaj může vypadat vycucaný z prstu, a předřadí mu obhajobu
+proti námitce, kterou čtenář nevyslovil. Věta pak nenese fakt, jen nejistotu
+pisatele. Rovnou napiš, z čeho číslo vychází; obhajoba zmizí sama.
+
+- ✗ „Osm hodin denně jsem nevzal od stropu." (navíc kalk z „off the top of my head")
+- ✗ „Nejde o náhodné číslo." / „To si nevymýšlím."
+- ✓ „Osm hodin denně beru proto, že přístroj nejede pořád."
+
+Je to blízký příbuzný bodu 3: tam text vysvětluje, co je na něm zajímavé,
+tady vysvětluje, proč mu máte věřit. Obojí je řeč o textu místo textu.
+
 ## Změny & rozhodnutí
 
 | datum | co | proč |
 | --- | --- | --- |
+| 2026-10-30 | Přidán bod 9 (autor obhajuje vlastní číslo) | Úprava uživatele v draftu GeekLife 25134: škrtl „Osm hodin denně jsem nevzal od stropu." V témže článku označil dalších pět vazeb, kde neživá věc dostala lidské sloveso (hodnota povyleze, vývod sedí, sloupec nese, krabice radí); dvě z nich odešly jako kalky do cs/kalky.md, zbytek je stylová preference GeekLife. |
 | 2026-10-29 | Přidány body 7 (klišé z tiskových zpráv) a 8 (střídání synonym místo názvu) | Porovnání prvních a finálních revizí 174 redakčních článků: redakce smazala „kabely jsou minulostí", čtyřikrát přepsala „krychli" a třikrát „stroj" na název přístroje; „mění pravidla hry" jen zmírnila na „chce měnit". |
 | 2026-08-27 | Přidán bod 6 o vymyšlené motivaci | Text tvrdil, že autor automatizuje neplánovaně „z podráždění". Skutečnost byla opačná: dělá to systematicky u každé zakázky. Vymyšlená motivace se od ostatních výmyslů liší tím, že ji zdroj pravdy nikdy neobsahuje a že se model plete rád o 180 stupňů — sáhne po líbivějším příběhu. |
 | 2026-08-27 | Přidán bod 5 o nedoloženém dovětku | Autor nachytal větu „Zabralo mi to hodinu měsíčně a nikomu to nic nepřineslo." První půlka pravda, druhá vymyšlená. V témže článku se našlo dalších devět nedoložených tvrzení, takže nešlo o výjimku. |
