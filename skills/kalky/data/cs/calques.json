@@ -58,7 +58,7 @@
     },
     {
       "key": "peníze leží v sadách",
-      "rx": "\\b(peníz\\w*|výhod\\w*|nevýhod\\w*|problém\\w*|úspor\\w*|rozdíl\\w*|kouzl\\w*|síl\\w*|hodnot\\w*|jádr\\w*|point\\w*|těžišt\\w*)\\s+(\\w+\\s+)?lež\\w+",
+      "rx": "\\b(peníz\\w*|výhod\\w*|nevýhod\\w*|problém\\w*|úspor\\w*|rozdíl\\w*|kouzl\\w*|síl\\w*|hodnot\\w*|jádr\\w*|point\\w*|těžišt\\w*|předěl\\w*)\\s+(\\w+\\s+)?lež\\w+",
       "label": "X leží v Y (the money lies in)",
       "probe": "Výhoda leží v ceně.",
       "counter": "Kabel leží ve krabici."
@@ -949,11 +949,18 @@
       "label": "sloupec nese štítkovou kapacitu (the column carries the rated capacity)",
       "probe": "Sloupec s litry nese štítkovou kapacitu.",
       "counter": "Sloup nese střechu přístřešku."
+    },
+    {
+      "key": "hmotnost dělá na pohodlí nejvíc",
+      "rx": "\\bděl(?:á|ají|al[aoiy]?)\\s+(?:na|pro|u)\\s+\\w+(?:\\s+\\w+)?\\s+nejvíce?(?=\\s*[.,;:!?)])",
+      "label": "hmotnost dělá na pohodlí nejvíc (makes the most difference)",
+      "probe": "Zrovna hmotnost přitom dělá na pohodlí nejvíc.",
+      "counter": "Motor dělá na chodbě nejvíc hluku."
     }
   ],
   "generic": {
     "_comment": "Zobecněný vzor: fyzické/pohybové sloveso s abstraktním podmětem. Chytá i kalky, které v seznamu výše ještě nejsou. Varování, ne tvrdé porušení - falešné poplachy jsou očekávané.",
-    "abstract": "výhod|nevýhod|úspor|problém|mechanik|rozdíl|princip|kouzl|síl|hodnot|rezerv|jádr|point|důvod|smysl|klíč|těžišt|potenciál|rizik|tajemstv|zisk|podstat|přínos|slab(in|ost)|kvalit|nevýhod",
+    "abstract": "výhod|nevýhod|úspor|problém|mechanik|rozdíl|princip|kouzl|síl|hodnot|rezerv|jádr|point|důvod|smysl|klíč|těžišt|potenciál|rizik|tajemstv|zisk|podstat|přínos|slab(in|ost)|kvalit|nevýhod|předěl",
     "verbs": "lež|stoj[íi]|sed[íne]|nes(e|ou|l)|běž|žene|žen(ou)|míří|spočív|táhn|krá[čč]",
     "label": "abstraktní podmět s fyzickým slovesem (typický vzor kalku)"
   },

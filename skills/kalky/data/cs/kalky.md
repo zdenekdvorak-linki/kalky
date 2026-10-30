@@ -24,7 +24,7 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 - „ovladač nese tlačítka" / „čepičky nesou symboly" / „tělo nese port" (z „to carry / to bear / to feature") → **„na ovladači jsou tlačítka" / „na čepičkách jsou symboly" / „na těle najdete port"**. Věc pasivně „nenese" své součásti ani popisky, prostě je má nebo na ní jsou.
 - „reakce na pohyb běží mimo aplikaci" / „automatika běží i bez internetu" (z „to run") → **„na pohyb reaguje i bez aplikace" / „automatika funguje i bez internetu"**. Sloveso „běžet" si nech pro procesy a programy, funkce zařízení prostě fungují nebo reagují.
 - „nejnižší stupeň sedne k posteli" / „varianta sedne do malého bytu" (z „to fit / to sit well") → **„hodí se k posteli" / „hodí se do malého bytu"**. „Sednout" ve významu „vyhovovat" je hovorové a nepřesné, „hodit se" je jednoznačné.
-- „peníze leží v sadách" / „výhoda leží v ceně" / „problém leží jinde" (z „the money lies in / to lie in") → **„nejvíc ušetříte na sadách" / „výhodou je cena" / „problém je jinde"**. Abstraktní věc v češtině nikde neleží, prostě někde je, nebo ji rovnou popíšeš slovesem.
+- „peníze leží v sadách" / „výhoda leží v ceně" / „problém leží jinde" / „předěl leží jinde" (z „the money lies in / to lie in") → **„nejvíc ušetříte na sadách" / „výhodou je cena" / „problém je jinde" / „rozdíl je jinde"**. Abstraktní věc v češtině nikde neleží, prostě někde je, nebo ji rovnou popíšeš slovesem.
 - „skutečné peníze najdete v balení" / „velké peníze jsou v příslušenství" (z „the real money is in") → **„skutečnou úsporu najdete s příslušenstvím"**. Stejná anglická figura jako u „leží": v české větě pojmenuj rovnou to, o co jde (úspora, rozdíl, cena), ne „peníze" jako abstraktní entitu.
 - „mechanika stojí na jednoduchém pravidle" / „hlavní úspora stojí na bonusu" (z „to rest on / to be built on") → **„akce funguje s jednoduchým pravidlem" / „hlavní úsporu přináší bonus"**. Popiš, co věc dělá, místo aby na něčem stála.
 - „nejhlubší škrt" / „hluboká sleva" (z „deep cut / deep discount") → **„nejvyšší sleva"**. Sleva se v češtině měří výškou, ne hloubkou. U cenových akcí piš rovnou „sleva", slovo „škrt" si nech pro rozpočty.
@@ -278,5 +278,7 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 - „vývod sedí nízko u země" (z „the outlet sits low to the ground") → **„vývod je nízko u země"**
 
 - „sloupec nese štítkovou kapacitu" (z „the column carries the rated capacity") → **„sloupec uvádí štítkovou kapacitu"**
+
+- „hmotnost dělá na pohodlí nejvíc" (z „makes the most difference") → **„pohodlí nejvíc ovlivní hmotnost"**
 
 Seznam doplňuj, jakmile na další kalk narazíš.

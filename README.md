@@ -10,7 +10,7 @@ startují na 269 dolarech". Gramaticky je to správně, česky to nezní.
 
 | | |
 |---|---|
-| české kalky | 137 |
+| české kalky | 138 |
 | slovenské kalky | 26 |
 | bohemizmy | 31 |
 | AI obraty | 9 (posuzují se čtením, strojově jen antiteze) |
