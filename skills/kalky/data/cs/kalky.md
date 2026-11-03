@@ -281,4 +281,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „hmotnost dělá na pohodlí nejvíc" (z „makes the most difference") → **„pohodlí nejvíc ovlivní hmotnost"**
 
+- „čidlo to říká otevřeněji" (z „the sensor / the data / the datasheet says") → **„čidlo to označuje / z dat vyplývá / v datasheetu stojí"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

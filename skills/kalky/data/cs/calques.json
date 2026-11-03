@@ -956,6 +956,13 @@
       "label": "hmotnost dělá na pohodlí nejvíc (makes the most difference)",
       "probe": "Zrovna hmotnost přitom dělá na pohodlí nejvíc.",
       "counter": "Motor dělá na chodbě nejvíc hluku."
+    },
+    {
+      "key": "čidlo to říká otevřeněji",
+      "rx": "\\b(?:[Čč]idlo|[Ss]enzor|[Čč]ip|[Dd]ata|[Čč]ísla|[Gg]raf|[Tt]abulka|[Dd]atasheet)\\b(?:\\s+[^\\s.,;:!?]+){0,4}?\\s+(?:říká|říkají|řekne|řeknou)\\b",
+      "label": "čidlo to říká otevřeněji (the sensor / the data / the datasheet says)",
+      "probe": "Čidlo CCS811 od ams to říká otevřeněji.",
+      "counter": "Výrobce čidla to říká otevřeně."
     }
   ],
   "generic": {
