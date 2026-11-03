@@ -283,4 +283,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „čidlo to říká otevřeněji" (z „the sensor / the data / the datasheet says") → **„čidlo to označuje / z dat vyplývá / v datasheetu stojí"**
 
+- „výrobce / značka píše parametr" (z „the manufacturer says / lists 10 kPa") → **„výrobce uvádí / udává 10 kPa"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

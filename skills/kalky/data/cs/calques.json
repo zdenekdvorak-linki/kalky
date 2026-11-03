@@ -963,6 +963,13 @@
       "label": "čidlo to říká otevřeněji (the sensor / the data / the datasheet says)",
       "probe": "Čidlo CCS811 od ams to říká otevřeněji.",
       "counter": "Výrobce čidla to říká otevřeně."
+    },
+    {
+      "key": "výrobce / značka píše parametr",
+      "rx": "\\b(?:výrobc\\w*|výrobce|značk\\w*|e-?shop\\w*|Alz[aeyu]|specifikac\\w*)\\s+(?:\\w+\\s+){0,5}?(?:ne)?(?:na)?(?:píš\\w*|psal[aiy]?)\\s+(?:\\w+\\s+){0,2}?(?:\\d|kPa\\b|kilopascal\\w*|AW\\b|air\\s+watt\\w*|mAh\\b|minut\\w*|hodin\\w*|čísl\\w*|rozměr\\w*|výdrž\\w*|výkon\\w*|kapacit\\w*|hmotnost\\w*|objem\\w*)",
+      "label": "výrobce / značka píše parametr (the manufacturer says / lists 10 kPa)",
+      "probe": "Tři další značky píší kilopascaly a jen Lauben přidává air watty.",
+      "counter": "Výrobce píše v tiskové zprávě, že jde o nejsilnější ruční vysavač."
     }
   ],
   "generic": {
