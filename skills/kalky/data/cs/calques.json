@@ -970,6 +970,27 @@
       "label": "výrobce / značka píše parametr (the manufacturer says / lists 10 kPa)",
       "probe": "Tři další značky píší kilopascaly a jen Lauben přidává air watty.",
       "counter": "Výrobce píše v tiskové zprávě, že jde o nejsilnější ruční vysavač."
+    },
+    {
+      "key": "účinek nesou suroviny",
+      "rx": "\\b(?:účin\\w*|efekt\\w*)\\s+(?:\\w+\\s+){0,2}?(?:nese|nesou|nesl[aoy]?|neslo)\\b|\\b(?:nese|nesou|nesl[aoy]?|neslo)\\s+(?:\\w+\\s+){0,2}?(?:účin\\w*|efekt\\w*)",
+      "label": "účinek nesou suroviny (the effect is carried by / these ingredients carry the effect)",
+      "probe": "Účinek nesou dvě buněčné vody z BIO surovin.",
+      "counter": "Účinek přinesou až dva týdny pravidelného používání."
+    },
+    {
+      "key": "pleť pne",
+      "rx": "\\b(?:pleť|pleti|kůže|pokožk\\w*),?\\s+(?:\\w+\\s+){0,4}?(?:pne|pnou|pnula|pnulo)\\b|\\b(?:pne|pnou)\\s+(?:\\w+\\s+){0,1}?(?:pleť|kůže|pokožk\\w*)",
+      "label": "pleť pne (skin feels tight)",
+      "probe": "Citlivá pleť, která po létě pne a červená se.",
+      "counter": "Nad zahradou se pne pergola s vínem."
+    },
+    {
+      "key": "kapsle nese 425 mg",
+      "rx": "\\b(?:kapsl\\w*|tablet\\w*|dávk\\w*|porc\\w*|lžičk\\w*|odměrk\\w*|sáček|sáčk\\w*|pastilk\\w*|tobolk\\w*)\\s+(?:\\w+\\s+){0,2}?(?:nese|nesou|nesl[aoy]?)\\s+(?:\\w+\\s+){0,1}?\\d",
+      "label": "kapsle nese 425 mg (each capsule carries 425 mg)",
+      "probe": "Jedna kapsle nese 425 mg vitaminu C.",
+      "counter": "Jedna kapsle obsahuje 425 mg, krabičku nese kurýr."
     }
   ],
   "generic": {

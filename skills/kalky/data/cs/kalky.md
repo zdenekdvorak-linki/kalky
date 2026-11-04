@@ -285,4 +285,10 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „výrobce / značka píše parametr" (z „the manufacturer says / lists 10 kPa") → **„výrobce uvádí / udává 10 kPa"**
 
+- „účinek nesou suroviny" (z „the effect is carried by / these ingredients carry the effect") → **„za účinkem stojí, účinné jsou hlavně"**
+
+- „pleť pne" (z „skin feels tight") → **„pleť je napjatá, pleť se napíná, pocit pnutí"**
+
+- „kapsle nese 425 mg" (z „each capsule carries 425 mg") → **„kapsle obsahuje 425 mg, v kapsli je 425 mg"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.
