@@ -991,6 +991,13 @@
       "label": "kapsle nese 425 mg (each capsule carries 425 mg)",
       "probe": "Jedna kapsle nese 425 mg vitaminu C.",
       "counter": "Jedna kapsle obsahuje 425 mg, krabičku nese kurýr."
+    },
+    {
+      "key": "odvlhčovač dá litry (přístroj dá výkon/vodu)",
+      "rx": "\\b(dá|dává|dají|dávají|dával[aoiy]?)\\b(?!\\s+(se|za)\\b)\\s+(\\w+\\s+){0,3}?(\\d+[\\d,]*\\s+)?(litr\\w*|mililitr\\w*|ml\\b|vody\\b|výkon\\w*|polovin\\w*|desetin\\w*)",
+      "label": "odvlhčovač dá litry (přístroj dá výkon/vodu) (the dehumidifier gives 20 litres / gives half the output)",
+      "probe": "Levný odvlhčovač dá podle majitelů desetinu slibované vody.",
+      "counter": "Dá se to spočítat na litry a kolik za něj dá v bazaru, nevím."
     }
   ],
   "generic": {

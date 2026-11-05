@@ -291,4 +291,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „kapsle nese 425 mg" (z „each capsule carries 425 mg") → **„kapsle obsahuje 425 mg, v kapsli je 425 mg"**
 
+- „odvlhčovač dá litry (přístroj dá výkon/vodu)" (z „the dehumidifier gives 20 litres / gives half the output") → **„zvládne, odvlhčí, dostane ze vzduchu"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.
