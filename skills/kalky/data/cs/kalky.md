@@ -305,4 +305,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „píšete od nuly" (z „to write / build from scratch") → **„pokaždé znovu / od začátku / úplně nově"**
 
+- „výtka míří" (z „the criticism is aimed at / targets") → **„výtka se týká"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

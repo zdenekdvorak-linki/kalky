@@ -1040,6 +1040,13 @@
       "label": "píšete od nuly (to write / build from scratch)",
       "probe": "Každou nabídku píšete od nuly.",
       "counter": "Stupnice na váze začíná od nuly."
+    },
+    {
+      "key": "výtka míří",
+      "rx": "\\bvýt(k\\w*|ek)\\s+(\\w+\\s+){0,2}(za|na)?míř\\w*|\\b(za|na)?míř\\w*\\s+(\\w+\\s+)?výt(k\\w*|ek)\\b",
+      "label": "výtka míří (the criticism is aimed at / targets)",
+      "probe": "Hlavní výtka recenzentů míří na výdrž baterie.",
+      "counter": "Střelec míří na terč a výtku trenéra neslyší."
     }
   ],
   "generic": {
