@@ -293,4 +293,16 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „odvlhčovač dá litry (přístroj dá výkon/vodu)" (z „the dehumidifier gives 20 litres / gives half the output") → **„zvládne, odvlhčí, dostane ze vzduchu"**
 
+- „práce teče" (z „how work flows") → **„jak práce probíhá / jak u vás práce postupuje"**
+
+- „zjistíme na krátkém hovoru" (z „we will find out on a short call") → **„při krátkém hovoru / v krátkém telefonátu / po telefonu"**
+
+- „pojďme probrat" (z „let's discuss") → **„probereme spolu / proberme"**
+
+- „srozumitelně napříč kanály" (z „across channels") → **„ve všech kanálech / všude, kde je značka vidět"**
+
+- „rezervovat hovor" (z „book a call") → **„domluvit si konzultaci / vybrat termín / sjednat schůzku"**
+
+- „píšete od nuly" (z „to write / build from scratch") → **„pokaždé znovu / od začátku / úplně nově"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

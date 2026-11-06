@@ -998,6 +998,48 @@
       "label": "odvlhčovač dá litry (přístroj dá výkon/vodu) (the dehumidifier gives 20 litres / gives half the output)",
       "probe": "Levný odvlhčovač dá podle majitelů desetinu slibované vody.",
       "counter": "Dá se to spočítat na litry a kolik za něj dá v bazaru, nevím."
+    },
+    {
+      "key": "práce teče",
+      "rx": "\\bpráce\\s+te(če|kla)\\b",
+      "label": "práce teče (how work flows)",
+      "probe": "Projdeme, jak práce teče, a najdeme slabá místa.",
+      "counter": "Při práci teče z kohoutku jen studená voda."
+    },
+    {
+      "key": "zjistíme na krátkém hovoru",
+      "rx": "\\b(zjist|prober|domluv|vyřeš|ukáž|vysvětl|projd)\\w*\\s+(\\w+\\s+){0,3}na\\s+(\\w+\\s+){0,3}(hovoru|callu)\\b",
+      "label": "zjistíme na krátkém hovoru (we will find out on a short call)",
+      "probe": "Kolik se dá ušetřit, zjistíme na krátkém nezávazném hovoru.",
+      "counter": "Záleží na každém krátkém hovoru se zákazníkem."
+    },
+    {
+      "key": "pojďme probrat",
+      "rx": "\\bpojďme\\s+(si\\s+|spolu\\s+|to\\s+)*(probrat|prodiskutovat|shrnout|zjistit)\\b",
+      "label": "pojďme probrat (let's discuss)",
+      "probe": "Pojďme probrat, kde vám můžeme ušetřit čas.",
+      "counter": "Pojďme radši spát, probereme to ráno."
+    },
+    {
+      "key": "srozumitelně napříč kanály",
+      "rx": "\\bnapříč\\s+(\\w+\\s+)?kanály\\b",
+      "label": "srozumitelně napříč kanály (across channels)",
+      "probe": "Logo a barvy popisují firmu srozumitelně napříč kanály.",
+      "counter": "Napříč celou republikou vede jediná dálnice."
+    },
+    {
+      "key": "rezervovat hovor",
+      "rx": "\\b(za)?rezerv\\w+\\s+(si\\s+)?(\\w+\\s+)?(hovor(u|y|ů|em)?|call\\w*)\\b",
+      "label": "rezervovat hovor (book a call)",
+      "probe": "Stačí si rezervovat hovor v kalendáři.",
+      "counter": "Rezervaci stolu potvrdíme krátkým telefonátem."
+    },
+    {
+      "key": "píšete od nuly",
+      "rx": "\\b(pí[sš]|psa[lt]|napsa|napí[sš]|tvoř|vytv[oá]ř|stav[íěi]|postav|děl[aá]|uděl|navrh|sestav|připrav|budov|vyvíj|vyvin)\\w*\\s+(\\w+\\s+){0,3}od\\s+nuly\\b",
+      "label": "píšete od nuly (to write / build from scratch)",
+      "probe": "Každou nabídku píšete od nuly.",
+      "counter": "Stupnice na váze začíná od nuly."
     }
   ],
   "generic": {
