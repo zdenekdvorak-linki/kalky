@@ -307,4 +307,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „výtka míří" (z „the criticism is aimed at / targets") → **„výtka se týká"**
 
+- „otevře předobjednávky" (z „opens preorders") → **„předobjednat půjde od… / začne přijímat předobjednávky"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

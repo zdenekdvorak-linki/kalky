@@ -1047,6 +1047,13 @@
       "label": "výtka míří (the criticism is aimed at / targets)",
       "probe": "Hlavní výtka recenzentů míří na výdrž baterie.",
       "counter": "Střelec míří na terč a výtku trenéra neslyší."
+    },
+    {
+      "key": "otevře předobjednávky",
+      "rx": "\\b(?:otev(?:[řr]|ír)\\w*|otvír\\w*)\\s+(?:\\w+\\s+)?předobjedn\\w*|\\bpředobjedn\\w*\\s+(?:se\\s+)?(?:otev(?:[řr]|ír)\\w*|otvír\\w*)",
+      "label": "otevře předobjednávky (opens preorders)",
+      "probe": "Výrobce otevře předobjednávky 12. listopadu.",
+      "counter": "Předobjednat půjde od 12. listopadu."
     }
   ],
   "generic": {
