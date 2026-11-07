@@ -309,4 +309,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „otevře předobjednávky" (z „opens preorders") → **„předobjednat půjde od… / začne přijímat předobjednávky"**
 
+- „tlak nic nerozlišuje" (z „pressure barely differentiates") → **„tlak se skoro neliší"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

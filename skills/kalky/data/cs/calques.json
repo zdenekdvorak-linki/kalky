@@ -1054,6 +1054,13 @@
       "label": "otevře předobjednávky (opens preorders)",
       "probe": "Výrobce otevře předobjednávky 12. listopadu.",
       "counter": "Předobjednat půjde od 12. listopadu."
+    },
+    {
+      "key": "tlak nic nerozlišuje",
+      "rx": "\\b(?:tlak|cena|výkon|parametr|údaj|hodnota|bary)\\s+(?:v\\s+\\w+(?:\\s+\\w+){0,2}\\s+)?(?:skoro\\s+|téměř\\s+|prakticky\\s+)?(?:nic\\s+)?(?:ne)?rozlišuj\\w*",
+      "label": "tlak nic nerozlišuje (pressure barely differentiates)",
+      "probe": "Tlak v této cenové skupině skoro nic nerozlišuje.",
+      "counter": "Čidlo rozlišuje tlak a teplotu."
     }
   ],
   "generic": {

@@ -10,10 +10,10 @@ startují na 269 dolarech". Gramaticky je to správně, česky to nezní.
 
 | | |
 |---|---|
-| české kalky | 152 |
+| české kalky | 153 |
 | slovenské kalky | 26 |
 | bohemizmy | 31 |
-| AI obraty | 9 (posuzují se čtením, strojově jen antiteze) |
+| AI obraty | 10 (posuzují se čtením, strojově jen antiteze) |
 
 Každé pravidlo má větu, kterou regex musí chytit, a většinou i protipříklad,
 který chytit nesmí. Test to ověřuje u každé změny, takže seznam může růst

@@ -159,10 +159,25 @@ pisatele. Rovnou napiš, z čeho číslo vychází; obhajoba zmizí sama.
 Je to blízký příbuzný bodu 3: tam text vysvětluje, co je na něm zajímavé,
 tady vysvětluje, proč mu máte věřit. Obojí je řeč o textu místo textu.
 
+## 10. Pokyn ze zadání prosákne do textu
+
+Model dostane omezení pro sebe („nic jsme netestovali, nepředstírej to") a
+přepíše ho do článku jako sdělení čtenáři. Ten se o věci, na kterou se neptal,
+dozví z věty, která mu nic nepřidá. Omezení má změnit, co v textu je, ne se v něm
+objevit.
+
+- ✗ „Parametry pocházejí z listů výrobců, nic jsem neměřil."
+- ✗ „Tento text nevychází z vlastního testu."
+- ✓ „Parametry pocházejí z listů výrobců."
+
+Hranice vede u toho, o čem věta mluví. „Výdrž výrobce neuvádí" říká něco o věci,
+a proto zůstává. „Nic jsem neměřil" říká něco o pisateli.
+
 ## Změny & rozhodnutí
 
 | datum | co | proč |
 | --- | --- | --- |
+| 2026-11-07 | Přidán bod 10 (pokyn ze zadání prosákne do textu) | Úprava uživatele ve srovnání parních čističů na GeekLife: zadání obsahovalo „nic jsme netestovali“, model z toho udělal větu „nic jsem neměřil“ a uživatel ji škrtl. Nejde o pravidlo jednoho webu, ale o to, jak model zachází se zadáním. |
 | 2026-10-30 | Přidán bod 9 (autor obhajuje vlastní číslo) | Úprava uživatele v draftu GeekLife 25134: škrtl „Osm hodin denně jsem nevzal od stropu." V témže článku označil dalších pět vazeb, kde neživá věc dostala lidské sloveso (hodnota povyleze, vývod sedí, sloupec nese, krabice radí); dvě z nich odešly jako kalky do cs/kalky.md, zbytek je stylová preference GeekLife. |
 | 2026-10-29 | Přidány body 7 (klišé z tiskových zpráv) a 8 (střídání synonym místo názvu) | Porovnání prvních a finálních revizí 174 redakčních článků: redakce smazala „kabely jsou minulostí", čtyřikrát přepsala „krychli" a třikrát „stroj" na název přístroje; „mění pravidla hry" jen zmírnila na „chce měnit". |
 | 2026-08-27 | Přidán bod 6 o vymyšlené motivaci | Text tvrdil, že autor automatizuje neplánovaně „z podráždění". Skutečnost byla opačná: dělá to systematicky u každé zakázky. Vymyšlená motivace se od ostatních výmyslů liší tím, že ji zdroj pravdy nikdy neobsahuje a že se model plete rád o 180 stupňů — sáhne po líbivějším příběhu. |
