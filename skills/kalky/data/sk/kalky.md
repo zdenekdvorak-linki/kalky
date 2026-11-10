@@ -71,4 +71,12 @@ Slovo znie v angličtine aj slovenčine podobne, ale znamená niečo iné. Doslo
 
 - „aplikovať sa na pozíciu" (z „to apply for a job") → **„uchádzať sa o miesto / podať si prihlášku"**
 
+- „berie EPUB" (z „takes EPUB") → **„podporuje EPUB"**
+
+- „beží v krajinách" (z „runs in countries") → **„je dostupná v krajinách"**
+
+- „rozbíja čítačky" (z „breaks e-readers") → **„spôsobuje problémy čítačkám"**
+
+- „dáva zmysel" (z „makes sense") → **„má zmysel"**
+
 Zoznam doplňuj, jakmile na další kalk narazíš.

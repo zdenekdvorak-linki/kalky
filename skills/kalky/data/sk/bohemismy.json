@@ -156,6 +156,21 @@
       "rx": "\\b[Bb]ezkartáč\\w*",
       "fix": "bezuhlíkový / bezkefový motor (české „bezkartáčový“, 2026-10-29)",
       "probe": "Má bezkartáčový motor."
+    },
+    {
+      "rx": "\\b[Kk]de\\s+to\\s+šlo\\b",
+      "fix": "kde to bolo možné",
+      "probe": "Filter nasadili tam, kde to šlo."
+    },
+    {
+      "rx": "\\b[Rr]ad(?:í|ia|il|ila|ili|íme|íte)(?:\\s+sa)?\\s+(?:do|medzi)\\b",
+      "fix": "zaraďuje do / zaraďuje medzi (české „řadí do“; slovenské radiť = dávať rady, 2026-11-10)",
+      "probe": "Blog oba modely radí do vlny lacných čítačiek."
+    },
+    {
+      "rx": "\\b(?:obchody|predajne|e-shopy|predajcovia)\\b[^.]{0,25}\\bnevedú\\b",
+      "fix": "nemajú v ponuke / nepredávajú (české „obchody je nevedou“, 2026-11-10)",
+      "probe": "Kúpite ich len v zahraničí, slovenské obchody ich nevedú."
     }
   ]
 }

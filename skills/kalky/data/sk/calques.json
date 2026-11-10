@@ -179,6 +179,34 @@
       "label": "aplikovať sa na pozíciu (to apply for a job)",
       "probe": "Kto chce aplikovať na pozíciu, pošle CV.",
       "counter": "Náter aplikujte na suchý povrch."
+    },
+    {
+      "key": "berie EPUB",
+      "rx": "\\bberie (EPUB|PDF|MOBI|AZW)\\b",
+      "label": "berie EPUB (takes EPUB)",
+      "probe": "Služba berie EPUB aj PDF do 200 MB.",
+      "counter": "Služba podporuje EPUB aj PDF, kto si berie knihy na cesty, ocení to."
+    },
+    {
+      "key": "beží v krajinách",
+      "rx": "\\bbeží (len |iba )?v (\\w+ )?krajinách\\b",
+      "label": "beží v krajinách (runs in countries)",
+      "probe": "Služba beží len v šiestich krajinách.",
+      "counter": "Služba je dostupná len v šiestich krajinách a beží na serveroch v Írsku."
+    },
+    {
+      "key": "rozbíja čítačky",
+      "rx": "\\b(čítačky|telefóny|mobily|hodinky|zariadenia|aplikácie) rozbíja(la|l|li|jú)?\\b|\\brozbíja(la|l|li|jú)? (čítačky|telefóny|mobily|hodinky|zariadenia|aplikácie)\\b",
+      "label": "rozbíja čítačky (breaks e-readers)",
+      "probe": "Beta čítačky rozbíjala.",
+      "counter": "Beta čítačkám spôsobovala problémy, deti rozbíjajú poháre."
+    },
+    {
+      "key": "dáva zmysel",
+      "rx": "\\b(?:[Dd]áva|[Dd]ávajú|[Dd]ávalo|[Dd]ávať)\\s+(?:to\\s+)?zmysel\\b|\\bzmysel\\s+(?:to\\s+)?dáva\\b",
+      "label": "dáva zmysel (makes sense)",
+      "probe": "Zmysel to dáva len vtedy, keď vám neprekáža Android 11.",
+      "counter": "Má to zmysel len vtedy, keď vám neprekáža Android 11."
     }
   ],
   "generic": {
