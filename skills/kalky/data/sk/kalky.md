@@ -79,4 +79,8 @@ Slovo znie v angličtine aj slovenčine podobne, ale znamená niečo iné. Doslo
 
 - „dáva zmysel" (z „makes sense") → **„má zmysel"**
 
+- „predné svetlo" (z „front light") → **„podsvietenie / podsvietený displej"**
+
+- „displej ukáže N farieb" (z „the display shows N colors") → **„vykreslí / dokáže vykresliť N farieb"**
+
 Zoznam doplňuj, jakmile na další kalk narazíš.

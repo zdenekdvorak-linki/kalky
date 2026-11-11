@@ -1063,6 +1063,34 @@
       "counter": "Čidlo rozlišuje tlak a teplotu."
     },
     {
+      "key": "výrobce řekl cenu",
+      "rx": "\\b(?:ne)?řek(?:l|la|li|lo)\\s+(?:rovnou\\s+|zatím\\s+|konečně\\s+|ještě\\s+)?cen[uy]\\b|\\bcen[uy]\\s+(?:\\w+\\s+){0,3}(?:ne)?řek(?:l|la|li|lo)\\b",
+      "label": "výrobce řekl cenu (the company said the price)",
+      "probe": "Cenu výrobce zatím neřekl a v Česku novinku nikdo neprodává.",
+      "counter": "Prodavač mi řekl, že cena brzy klesne."
+    },
+    {
+      "key": "přední světlo",
+      "rx": "\\bpřední\\s+světl(?:o|em|u)\\b|\\bpředního\\s+světla\\b|\\bpředním\\s+světlem\\b",
+      "label": "přední světlo (front light)",
+      "probe": "Plus má přední světlo s nastavitelnou teplotou.",
+      "counter": "Přední světla auta svítí LED diodami."
+    },
+    {
+      "key": "displej ukáže N barev",
+      "rx": "\\b(?:ukáže|ukazuje|zobrazí|zobrazuje)\\s+(?:až\\s+)?\\d[\\d  ]*(?:milion\\w*\\s+)?barev\\b",
+      "label": "displej ukáže N barev (the display shows N colors)",
+      "probe": "Displej Kaleido 3 ukáže 4 096 barev.",
+      "counter": "Displej Kaleido 3 umí vykreslit 4 096 barev."
+    },
+    {
+      "key": "za své peníze dostanete",
+      "rx": "\\bza (své|vaše|svoje) peníze (dostanete|získáte|máte)\\b",
+      "label": "za své peníze dostanete (for your money you get)",
+      "probe": "Za své peníze dostanete rámeček se stojánkem.",
+      "counter": "Za tu cenu dostanete rámeček se stojánkem."
+    },
+    {
       "key": "titul odešel (z nabídky)",
       "rx": "(?:\\b[Oo]dešl[aoiy]?\\b\\s+(?:\\w+\\s+){0,3}?(?:titul|film|seriál)\\w*|\\b(?:jich|[Zz] nabídky|[Zz] Netflixu|[Zz] katalogu|[Zz]e služby)\\s+(?:\\w+\\s+){0,3}?(?:odešl[aoiy]?|odešel|odchází|odcházejí)\\b|\\b(?:odešl[aoiy]?|odešel|odchází|odcházejí)\\s+(?:\\w+\\s+){0,3}?(?:titul|film|seriál|z nabídky|z Netflixu|z katalogu)\\w*|\\b(?:[Tt]itul|[Ff]ilm|[Ss]eriál|[Dd]okument)\\w*\\s+(?:\\w+\\s+){0,2}(?:odešl[aoiy]?|odešel|odchází|odcházejí)\\b)",
       "label": "titul odešel (z nabídky) (the title left (Netflix))",

@@ -311,6 +311,14 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „tlak nic nerozlišuje" (z „pressure barely differentiates") → **„tlak se skoro neliší"**
 
+- „výrobce řekl cenu" (z „the company said the price") → **„cenu neuvedl / nezveřejnil, cena zatím není známá (firma nemluví)"**
+
+- „přední světlo" (z „front light") → **„podsvícení / podsvícený displej"**
+
+- „displej ukáže N barev" (z „the display shows N colors") → **„vykreslí / umí vykreslit N barev"**
+
+- „za své peníze dostanete" (z „for your money you get") → **„za tu cenu dostanete / v balení najdete"**
+
 - „titul odešel (z nabídky)" (z „the title left (Netflix)") → **„Netflix titul stáhl / titul už není dostupný / zmizel z nabídky"**
 
 Seznam doplňuj, jakmile na další kalk narazíš.

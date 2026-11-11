@@ -207,6 +207,20 @@
       "label": "dáva zmysel (makes sense)",
       "probe": "Zmysel to dáva len vtedy, keď vám neprekáža Android 11.",
       "counter": "Má to zmysel len vtedy, keď vám neprekáža Android 11."
+    },
+    {
+      "key": "predné svetlo",
+      "rx": "\\bpredn(?:é|ého|ým)\\s+svetl(?:o|a|om)\\b",
+      "label": "predné svetlo (front light)",
+      "probe": "Plus má predné svetlo s nastaviteľnou teplotou.",
+      "counter": "Predné svetlá auta svietia diódami."
+    },
+    {
+      "key": "displej ukáže N farieb",
+      "rx": "\\b(?:ukáže|ukazuje|zobrazí|zobrazuje)\\s+(?:až\\s+)?\\d[\\d  ]*(?:milión\\w*\\s+)?farieb\\b",
+      "label": "displej ukáže N farieb (the display shows N colors)",
+      "probe": "Displej Kaleido 3 ukáže 4 096 farieb.",
+      "counter": "Displej Kaleido 3 dokáže vykresliť 4 096 farieb."
     }
   ],
   "generic": {
