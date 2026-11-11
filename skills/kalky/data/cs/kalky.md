@@ -321,4 +321,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „titul odešel (z nabídky)" (z „the title left (Netflix)") → **„Netflix titul stáhl / titul už není dostupný / zmizel z nabídky"**
 
+- „delit_se_o_silnici" (z „share the road") → **„brát ohled na ostatní na silnici / jezdit ohleduplně"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

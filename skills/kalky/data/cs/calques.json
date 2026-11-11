@@ -1096,6 +1096,13 @@
       "label": "titul odešel (z nabídky) (the title left (Netflix))",
       "probe": "Česká nabídka Netflixu se za týden rozrostla o 55 titulů a 30 jich odešlo, mezi nimi Zjizvená tvář.",
       "counter": "Neurochirurg po nezdařené operaci odešel z prestižní kliniky do obyčejné nemocnice."
+    },
+    {
+      "key": "delit_se_o_silnici",
+      "rx": "(děl\\w*\\s+se|se\\s+děl\\w*)\\s+o\\s+silnic\\w*",
+      "label": "delit_se_o_silnici (share the road)",
+      "probe": "Řidiči mají zpomalit a bezpečně se dělit o silnici.",
+      "counter": "Silnice se dělí o dva pruhy."
     }
   ],
   "generic": {
