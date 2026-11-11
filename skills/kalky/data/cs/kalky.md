@@ -311,4 +311,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „tlak nic nerozlišuje" (z „pressure barely differentiates") → **„tlak se skoro neliší"**
 
+- „titul odešel (z nabídky)" (z „the title left (Netflix)") → **„Netflix titul stáhl / titul už není dostupný / zmizel z nabídky"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

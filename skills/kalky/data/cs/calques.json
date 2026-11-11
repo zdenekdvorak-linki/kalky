@@ -1061,6 +1061,13 @@
       "label": "tlak nic nerozlišuje (pressure barely differentiates)",
       "probe": "Tlak v této cenové skupině skoro nic nerozlišuje.",
       "counter": "Čidlo rozlišuje tlak a teplotu."
+    },
+    {
+      "key": "titul odešel (z nabídky)",
+      "rx": "(?:\\b[Oo]dešl[aoiy]?\\b\\s+(?:\\w+\\s+){0,3}?(?:titul|film|seriál)\\w*|\\b(?:jich|[Zz] nabídky|[Zz] Netflixu|[Zz] katalogu|[Zz]e služby)\\s+(?:\\w+\\s+){0,3}?(?:odešl[aoiy]?|odešel|odchází|odcházejí)\\b|\\b(?:odešl[aoiy]?|odešel|odchází|odcházejí)\\s+(?:\\w+\\s+){0,3}?(?:titul|film|seriál|z nabídky|z Netflixu|z katalogu)\\w*|\\b(?:[Tt]itul|[Ff]ilm|[Ss]eriál|[Dd]okument)\\w*\\s+(?:\\w+\\s+){0,2}(?:odešl[aoiy]?|odešel|odchází|odcházejí)\\b)",
+      "label": "titul odešel (z nabídky) (the title left (Netflix))",
+      "probe": "Česká nabídka Netflixu se za týden rozrostla o 55 titulů a 30 jich odešlo, mezi nimi Zjizvená tvář.",
+      "counter": "Neurochirurg po nezdařené operaci odešel z prestižní kliniky do obyčejné nemocnice."
     }
   ],
   "generic": {
