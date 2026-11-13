@@ -171,6 +171,11 @@
       "rx": "\\b(?:obchody|predajne|e-shopy|predajcovia)\\b[^.]{0,25}\\bnevedú\\b",
       "fix": "nemajú v ponuke / nepredávajú (české „obchody je nevedou“, 2026-11-10)",
       "probe": "Kúpite ich len v zahraničí, slovenské obchody ich nevedú."
+    },
+    {
+      "rx": "\\b[Nn]ejde\\s+(?:(?:ju|ho|ich|to|sa)\\s+)?\\w+ť\\b|\\b\\w+ť\\s+(?:(?:ju|ho|ich|to|sa)\\s+)?nejde\\b",
+      "fix": "nedá sa + infinitív (české „nejde vypnout“ = nedá se, 2026-11-13)",
+      "probe": "Alarm podľa výrobcu nejde stlmiť ani vypnúť."
     }
   ]
 }
