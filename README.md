@@ -11,8 +11,8 @@ startují na 269 dolarech". Gramaticky je to správně, česky to nezní.
 | | |
 |---|---|
 | české kalky | 159 |
-| slovenské kalky | 32 |
-| bohemizmy | 35 |
+| slovenské kalky | 34 |
+| bohemizmy | 38 |
 | AI obraty | 10 (posuzují se čtením, strojově jen antiteze) |
 
 Každé pravidlo má větu, kterou regex musí chytit, a většinou i protipříklad,

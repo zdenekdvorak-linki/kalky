@@ -83,4 +83,8 @@ Slovo znie v angličtine aj slovenčine podobne, ale znamená niečo iné. Doslo
 
 - „displej ukáže N farieb" (z „the display shows N colors") → **„vykreslí / dokáže vykresliť N farieb"**
 
+- „denný prídel" (z „daily allowance") → **„každý deň N / denný limit"**
+
+- „ponorenie neprekáža" (z „doesn't mind submersion") → **„ponorenie vydrží / odolá ponoreniu"**
+
 Zoznam doplňuj, jakmile na další kalk narazíš.

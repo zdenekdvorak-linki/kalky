@@ -176,6 +176,21 @@
       "rx": "\\b[Nn]ejde\\s+(?:(?:ju|ho|ich|to|sa)\\s+)?\\w+ť\\b|\\b\\w+ť\\s+(?:(?:ju|ho|ich|to|sa)\\s+)?nejde\\b",
       "fix": "nedá sa + infinitív (české „nejde vypnout“ = nedá se, 2026-11-13)",
       "probe": "Alarm podľa výrobcu nejde stlmiť ani vypnúť."
+    },
+    {
+      "rx": "\\b[Jj]emnos[tť]\\w*[^.]{0,40}\\b(?:PPI|bodov na palec)\\b",
+      "fix": "hustota bodov / rozlíšenie (české „jemnost displeje“, 2026-11-14)",
+      "probe": "Jemnosť má 200 bodov na palec (PPI), väčší model len 150."
+    },
+    {
+      "rx": "\\bvyjde\\s+na\\s+polovic\\w*",
+      "fix": "stojí polovicu (české „vyjde na polovinu ceny“, 2026-11-14)",
+      "probe": "Modul vyjde na polovicu ceny mosta."
+    },
+    {
+      "rx": "\\b(?:tarif\\s+(?:Ultra|Pro|Plus|Premium|Basic)|(?:drahší|lacnejší|vyšší|nižší|najdrahší|najlacnejší)\\s+tarif)\\b",
+      "fix": "tarifa (ž. r.): tarifa Ultra, drahšia tarifa (české „tarif“, 2026-11-14)",
+      "probe": "Predplatitelia majú tarif Ultra s 25 000 kreditmi, drahší tarif sa oplatí len niekomu."
     }
   ]
 }

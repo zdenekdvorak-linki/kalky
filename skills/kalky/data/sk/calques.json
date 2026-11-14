@@ -221,6 +221,20 @@
       "label": "displej ukáže N farieb (the display shows N colors)",
       "probe": "Displej Kaleido 3 ukáže 4 096 farieb.",
       "counter": "Displej Kaleido 3 dokáže vykresliť 4 096 farieb."
+    },
+    {
+      "key": "denný prídel",
+      "rx": "\\bdenn\\w* prídel\\w*",
+      "label": "denný prídel (daily allowance)",
+      "probe": "Neplatiaci používatelia majú denný prídel 50 kreditov.",
+      "counter": "Neplatiaci používatelia dostanú každý deň 50 kreditov."
+    },
+    {
+      "key": "ponorenie neprekáža",
+      "rx": "\\bponoren\\w*\\s+(?:\\w+\\s+){0,2}neprekáž\\w*",
+      "label": "ponorenie neprekáža (doesn't mind submersion)",
+      "probe": "Hľadajte čítačku, ktorej ponorenie neprekáža.",
+      "counter": "Hľadajte čítačku, ktorá ponorenie vydrží."
     }
   ],
   "generic": {
