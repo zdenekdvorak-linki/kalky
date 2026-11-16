@@ -87,4 +87,6 @@ Slovo znie v angličtine aj slovenčine podobne, ale znamená niečo iné. Doslo
 
 - „ponorenie neprekáža" (z „doesn't mind submersion") → **„ponorenie vydrží / odolá ponoreniu"**
 
+- „všeobecný vzhľad" (z „generic look") → **„šablónovitý / generický vzhľad"**
+
 Zoznam doplňuj, jakmile na další kalk narazíš.

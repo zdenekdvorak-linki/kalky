@@ -235,6 +235,13 @@
       "label": "ponorenie neprekáža (doesn't mind submersion)",
       "probe": "Hľadajte čítačku, ktorej ponorenie neprekáža.",
       "counter": "Hľadajte čítačku, ktorá ponorenie vydrží."
+    },
+    {
+      "key": "všeobecný vzhľad",
+      "rx": "[Vv]šeobecn[a-záäéíóôúý]* vzhľad[a-záäéíóôúý]*",
+      "label": "všeobecný vzhľad (generic look)",
+      "probe": "Pokyn vyhni sa všeobecnému vzhľadu nepomôže.",
+      "counter": "Všeobecné podmienky sa zmenili a vzhľad aplikácie ostal."
     }
   ],
   "generic": {
