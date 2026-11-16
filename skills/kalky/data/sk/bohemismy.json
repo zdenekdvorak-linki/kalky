@@ -1,5 +1,5 @@
 {
-  "_comment": "Bohemizmy: ceska interference ve slovenstine. Hleda se BEZ re.I (vzor na ceska pismena je psany malymi pismeny, aby prosla ceska vlastni jmena), varianty velikosti jsou primo v regexu. Kazdy zaznam ma rx, fix a probe (veta, ktera MUSI padnout).",
+  "_comment": "Bohemizmy: ceska interference ve slovenstine. Hleda se BEZ re.I (vzor na ceska pismena je psany malymi pismeny, aby prosla ceska vlastni jmena), varianty velikosti jsou primo v regexu. Kazdy zaznam ma rx, fix a probe (veta, ktera MUSI padnout); nepovinny counter je veta, ktera padnout NESMI.",
   "_source": "Zdroj: kuzmany/slovak-humanizer, soubor bohemizmy.md (MIT, (c) 2026 Zdeno Kuzmany). Prevzata je podmnozina relevantni pro web o byvani a domacnosti - vypusteny jsou polozky jako rohlík, poklopec, fena, cop. Prvni vzor je nejcennejsi: slovencina nezna e s hackem, r s hackem ani u s krouzkem, takze kazdy vyskyt je jisty nalez. Zamerne matchuje jen slova psana cele malymi pismeny, aby ceska vlastni jmena (Dvořák, Jiří) prosla.",
   "bohemisms": [
     {
@@ -93,9 +93,10 @@
       "probe": "Prádlo sušte na vzduchu."
     },
     {
-      "rx": "\\b[Kk]ufr\\w*",
+      "rx": "\\b[Kk]ufr(?:u|em|y|ech)?\\b",
       "fix": "kufor",
-      "probe": "Do kufru sa zmestí veľa."
+      "probe": "Do kufru sa zmestí veľa.",
+      "counter": "Do kufra sa zmestí veľa, kufre stoja pri dverách."
     },
     {
       "rx": "\\b[Pp]omazánk\\w*",

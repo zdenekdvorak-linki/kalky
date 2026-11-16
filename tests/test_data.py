@@ -63,6 +63,23 @@ class DataTest(unittest.TestCase):
                     self.assertTrue(b.get(f), 'chybí pole %s' % f)
                 self.assertTrue(re.search(b['rx'], b['probe']))
 
+    def test_bohemism_counters_are_clean(self):
+        # nepovinny protipriklad: spravna slovenska veta, kterou bohemizmus chytit nesmi
+        for b in read_json('sk', 'bohemismy.json')['bohemisms']:
+            if b.get('counter'):
+                with self.subTest(rx=b['rx']):
+                    self.assertIsNone(re.search(b['rx'], b['counter']))
+
+    def test_kufor_slovak_forms_pass(self):
+        # issue #2: kufra, kufri, kufre, kufrom, kufrík jsou spravne slovenske tvary
+        d = check.load('sk')
+        res = check.check('Do kufra sa zmestí veľa. V kufri je miesto, kufre stoja pri dverách, '
+                          's kufrom aj s kufríkom.', d)
+        self.assertEqual(res['bohemisms'], [])
+        for cz in ('kufr', 'kufru', 'kufrem', 'kufry', 'kufrech'):
+            with self.subTest(cz=cz):
+                self.assertTrue(check.check('Mám %s.' % cz, d)['bohemisms'])
+
     def test_plugin_has_no_version(self):
         # issue #1: pevna verze zastavi aktualizace pluginu; bez ni verzuje Claude Code podle SHA commitu
         for name in ('plugin.json', 'marketplace.json'):

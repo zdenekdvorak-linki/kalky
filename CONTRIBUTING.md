@@ -29,7 +29,7 @@ ne), ani překlepy.
    ```
 
    Slovenský kalk s `--lang sk`. Bohemizmus přidej rovnou do
-   `skills/kalky/data/sk/bohemismy.json` s poli `rx`, `fix` a `probe`; hledá
+   `skills/kalky/data/sk/bohemismy.json` s poli `rx`, `fix`, `probe` a nepovinným `counter` (věta, kterou chytit nesmí); hledá
    se bez ignorování velikosti písmen, varianty piš do regexu (`[Tt]ady`).
 3. Spusť testy:
 

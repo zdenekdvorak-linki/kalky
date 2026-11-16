@@ -53,7 +53,7 @@ Potřebuješ:
    ```
 
    Pro slovenštinu přidej `--lang sk`. Bohemizmus zapiš rovnou do
-   `skills/kalky/data/sk/bohemismy.json` (pole `rx`, `fix`, `probe`).
+   `skills/kalky/data/sk/bohemismy.json` (pole `rx`, `fix`, `probe`, nepovinně `counter`).
 3. Spusť `python -m unittest discover tests`. Musí projít.
 4. Otevři pull request. Do popisu napiš, v jakém textu jsi kalk potkal.
 

@@ -70,6 +70,8 @@ def load(lang):
             # bez re.I: viz _comment v bohemismy.json
             if not re.search(b['rx'], b['probe']):
                 raise DataError('%s: bohemizmus „%s" nechytil vlastní ukázkovou větu' % (lang, b['rx']))
+            if b.get('counter') and re.search(b['rx'], b['counter']):
+                raise DataError('%s: bohemizmus „%s" chytil protipříklad' % (lang, b['rx']))
     return data
 
 
