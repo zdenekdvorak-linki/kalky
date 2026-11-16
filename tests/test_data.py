@@ -63,6 +63,15 @@ class DataTest(unittest.TestCase):
                     self.assertTrue(b.get(f), 'chybí pole %s' % f)
                 self.assertTrue(re.search(b['rx'], b['probe']))
 
+    def test_plugin_has_no_version(self):
+        # issue #1: pevna verze zastavi aktualizace pluginu; bez ni verzuje Claude Code podle SHA commitu
+        for name in ('plugin.json', 'marketplace.json'):
+            with open(os.path.join(ROOT, '.claude-plugin', name), encoding='utf-8') as f:
+                raw = json.load(f)
+            entries = [raw] + raw.get('plugins', [])
+            with self.subTest(name=name):
+                self.assertFalse(any('version' in e for e in entries), 'pole version nechat prázdné')
+
     def test_czech_proper_names_pass_bohemism_letters(self):
         # ceska vlastni jmena ve slovenskem textu projit maji (regex bez re.I)
         res = check.check('Rozprával Jiří Dvořák z Přerova.', check.load('sk'))
