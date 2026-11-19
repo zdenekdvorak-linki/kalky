@@ -323,4 +323,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „delit_se_o_silnici" (z „share the road") → **„brát ohled na ostatní na silnici / jezdit ohleduplně"**
 
+- „těsto stojí na špaldové mouce" (z „the dough is built on") → **„těsto je ze špaldové mouky / základem je špaldová mouka"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.

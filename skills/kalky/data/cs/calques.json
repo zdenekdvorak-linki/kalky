@@ -1103,6 +1103,13 @@
       "label": "delit_se_o_silnici (share the road)",
       "probe": "Řidiči mají zpomalit a bezpečně se dělit o silnici.",
       "counter": "Silnice se dělí o dva pruhy."
+    },
+    {
+      "key": "těsto stojí na špaldové mouce",
+      "rx": "\\b(těst\\w*|recept\\w*|chuť|chuti|základ\\w*|krém\\w*|náplň\\w*|polev\\w*|zálivk\\w*|dezert\\w*|jídl\\w*|salát\\w*|pokrm\\w*)\\s+(\\w+\\s+)?stoj[íi]\\s+na\\s+(?!(tepl|chladn|lin[cč]|plech|stol|místě|vál|sporák|plotn|okn|parapet|mřížk|talíř))",
+      "label": "těsto stojí na špaldové mouce (the dough is built on)",
+      "probe": "Těsto stojí na špaldové mouce a perníkovém koření.",
+      "counter": "Těsto stojí na teplém místě, dokud nezdvojnásobí objem."
     }
   ],
   "generic": {
