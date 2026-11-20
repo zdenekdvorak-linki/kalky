@@ -242,6 +242,13 @@
       "label": "všeobecný vzhľad (generic look)",
       "probe": "Pokyn vyhni sa všeobecnému vzhľadu nepomôže.",
       "counter": "Všeobecné podmienky sa zmenili a vzhľad aplikácie ostal."
+    },
+    {
+      "key": "menovať (= uvádzať)",
+      "rx": "\\bmenuj\\w*\\s+(?:\\w+\\s+){0,2}?(?:model|kamer|produkt|zariaden|značk|senzor|čidl)\\w*",
+      "label": "menovať (= uvádzať) (CZ jmenovat (uvádět v seznamu))",
+      "probe": "TP-Link pri H200 menuje kamery C400 a C420.",
+      "counter": "Prezident menuje nového ministra."
     }
   ],
   "generic": {

@@ -89,4 +89,6 @@ Slovo znie v angličtine aj slovenčine podobne, ale znamená niečo iné. Doslo
 
 - „všeobecný vzhľad" (z „generic look") → **„šablónovitý / generický vzhľad"**
 
+- „menovať (= uvádzať)" (z „CZ jmenovat (uvádět v seznamu)") → **„uvádza / spomína"**
+
 Zoznam doplňuj, jakmile na další kalk narazíš.
