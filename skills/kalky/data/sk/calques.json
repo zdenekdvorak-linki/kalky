@@ -249,6 +249,13 @@
       "label": "menovať (= uvádzať) (CZ jmenovat (uvádět v seznamu))",
       "probe": "TP-Link pri H200 menuje kamery C400 a C420.",
       "counter": "Prezident menuje nového ministra."
+    },
+    {
+      "key": "berie kontext",
+      "rx": "\\bberie\\s+kontext",
+      "label": "berie kontext (takes context from)",
+      "probe": "Funkcia si berie kontext z Gmailu.",
+      "counter": "Funkcia využíva kontext z Gmailu."
     }
   ],
   "generic": {
