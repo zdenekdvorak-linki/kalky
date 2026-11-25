@@ -1,6 +1,6 @@
 ---
 name: kalky
-description: Najde v českém nebo slovenském textu kalky z angličtiny (doslovně přeložené vazby typu „uvnitř sedí čip", „výhoda leží v ceně"), bohemizmy ve slovenštině a antitezi „A, ne B", po které text zní jako AI. Ke každému nálezu dá přirozenou náhradu. Použij před odevzdáním jakéhokoli českého nebo slovenského textu (článek, překlad, e-mail, produktový popis), když uživatel chce text „učesat", „zkontrolovat češtinu", „najít kalky" nebo „aby to neznělo jako AI", a když při psaní narazíš na nový kalk, který v seznamu chybí.
+description: Kalky z angličtiny, bohemizmy a AI obraty v českém a slovenském textu, s náhradou ke každému nálezu. Použij před odevzdáním českého či slovenského textu a na „najdi kalky“, „zkontroluj češtinu“, „aby to neznělo jako AI“.
 license: MIT (kód), CC BY 4.0 (data), bohemizmy MIT (Zdeno Kuzmany)
 metadata:
   author: Zdeněk Dvořák, Linki.cz
