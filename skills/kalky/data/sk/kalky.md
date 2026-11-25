@@ -95,4 +95,6 @@ Slovo znie v angličtine aj slovenčine podobne, ale znamená niečo iné. Doslo
 
 - „berie kontext" (z „takes context from") → **„využíva / čerpá kontext"**
 
+- „most (Hue Bridge)" (z „bridge") → **„riadiaca jednotka, alebo Hue Bridge / Bridge Pro"**
+
 Zoznam doplňuj, jakmile na další kalk narazíš.

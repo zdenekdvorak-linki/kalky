@@ -263,6 +263,13 @@
       "label": "berie kontext (takes context from)",
       "probe": "Funkcia si berie kontext z Gmailu.",
       "counter": "Funkcia využíva kontext z Gmailu."
+    },
+    {
+      "key": "most (Hue Bridge)",
+      "rx": "\\b(?:[Rr]iadiac\\w*\\s+most\\w*|[Mm]ost(?:a|e|om)?\\s+(?:Hue|Bridge|Zigbee|Matter)|(?:Hue|Zigbee|Matter)\\s+most\\w*)",
+      "label": "most (Hue Bridge) (bridge)",
+      "probe": "Funkcia potrebuje most Hue Bridge Pro za necelých 130 eur.",
+      "counter": "Cez most sme išli pešo."
     }
   ],
   "generic": {

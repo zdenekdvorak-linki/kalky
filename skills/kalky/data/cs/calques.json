@@ -1152,6 +1152,13 @@
       "label": "jdou ve stejném pořadí (the sections go in the same order)",
       "probe": "Sekce jdou ve stejném pořadí jako listy tabulky.",
       "counter": "Sekce následují ve stejném pořadí jako listy tabulky."
+    },
+    {
+      "key": "most (Hue Bridge)",
+      "rx": "\\b(?:[Řř]ídicí\\s+most\\w*|[Mm]ost(?:u|ě|em|y)?\\s+(?:Hue|Bridge|Zigbee|Matter)|(?:Hue|Zigbee|Matter)\\s+most\\w*)",
+      "label": "most (Hue Bridge) (bridge)",
+      "probe": "Funkce potřebuje most Hue Bridge Pro za necelé tři tisíce korun.",
+      "counter": "Přes Karlův most jsme šli pěšky."
     }
   ],
   "generic": {

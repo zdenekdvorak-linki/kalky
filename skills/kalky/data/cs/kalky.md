@@ -337,4 +337,6 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „jdou ve stejném pořadí" (z „the sections go in the same order") → **„následují ve stejném pořadí"**
 
+- „most (Hue Bridge)" (z „bridge") → **„řídicí jednotka, nebo Hue Bridge / Bridge Pro"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.
