@@ -1110,6 +1110,48 @@
       "label": "těsto stojí na špaldové mouce (the dough is built on)",
       "probe": "Těsto stojí na špaldové mouce a perníkovém koření.",
       "counter": "Těsto stojí na teplém místě, dokud nezdvojnásobí objem."
+    },
+    {
+      "key": "přístroj si vezme N W",
+      "rx": "\\bvezm(?:e|ou)\\s+\\d[\\d\\s,]*\\s?k?W\\b",
+      "label": "přístroj si vezme N W (the device takes / draws N W)",
+      "probe": "Kompresorový model si vezme 175 W a adsorpční víc.",
+      "counter": "Z nádrže si vezme 2 litry vody a pak se vypne."
+    },
+    {
+      "key": "vyhrazeny-reproduktor",
+      "rx": "vyhrazen\\w* (?:zadn\\w+ )?(?:prostorov\\w+ )?reproduktor\\w*|reproduktor\\w* vyhrazen\\w*",
+      "label": "vyhrazeny-reproduktor (dedicated speaker)",
+      "probe": "Soundbar má reproduktor vyhrazený řeči.",
+      "counter": "Pro reproduktor máme vyhrazené místo na polici."
+    },
+    {
+      "key": "dotaz / stránka sedí na N. místě / na pozici N",
+      "rx": "\\bsed[íi]\\w*\\s+na\\s+(?:\\d+\\.\\s*(?:míst|příč)\\w*|pozic\\w*\\s+\\d)",
+      "label": "dotaz / stránka sedí na N. místě / na pozici N (the query sits at position N / ranks Nth)",
+      "probe": "Hlavní dotaz regionu sedí na 7. místě.",
+      "counter": "Sedí na třetím místě v řadě u okna."
+    },
+    {
+      "key": "servírovat obrázky ve WebP",
+      "rx": "servírov\\w*\\s+(?:\\S+\\s+){0,3}?(?:ve?|jako)\\s+(?:WebP|AVIF|formátu|JPE?G|PNG)",
+      "label": "servírovat obrázky ve WebP (to serve images in WebP)",
+      "probe": "Obrázky zmenšit a servírovat ve WebP podle šířky displeje.",
+      "counter": "Číšník bude servírovat polévku v míse."
+    },
+    {
+      "key": "vypisovat kanonizaci / og značku (= generovat)",
+      "rx": "(?:[Kk]anonizac\\w*|canonical|og:[\\w:]+)\\s+(?:\\S+\\s+){0,4}?vypis\\w*|vypis\\w*\\s+(?:\\S+\\s+){0,2}?(?:kanonizac|canonical|og:)",
+      "label": "vypisovat kanonizaci / og značku (= generovat) (to output the canonical / a meta tag)",
+      "probe": "Kanonizaci vypisovat jen jednou, přes Yoast.",
+      "counter": "Archiv vypíše výlety daného typu nebo období."
+    },
+    {
+      "key": "jdou ve stejném pořadí",
+      "rx": "\\bjd(?:ou|e)\\s+ve\\s+stejném\\s+pořadí",
+      "label": "jdou ve stejném pořadí (the sections go in the same order)",
+      "probe": "Sekce jdou ve stejném pořadí jako listy tabulky.",
+      "counter": "Sekce následují ve stejném pořadí jako listy tabulky."
     }
   ],
   "generic": {

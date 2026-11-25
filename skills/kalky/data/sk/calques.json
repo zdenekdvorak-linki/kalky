@@ -251,6 +251,13 @@
       "counter": "Prezident menuje nového ministra."
     },
     {
+      "key": "dosiahne na N metrov",
+      "rx": "\\bdosiahn(?:e|u|ol|la|uť)\\s+(?:až\\s+)?na\\s+\\d+(?:[,.]\\d+)?\\s*(?:metr\\w*|m|km|kilometr\\w*)\\b",
+      "label": "dosiahne na N metrov (reaches up to N meters)",
+      "probe": "Bluetooth 5.4 dosiahne na 10 metrov.",
+      "counter": "Bluetooth 5.4 má dosah 10 metrov a cena dosiahne 30 eur."
+    },
+    {
       "key": "berie kontext",
       "rx": "\\bberie\\s+kontext",
       "label": "berie kontext (takes context from)",

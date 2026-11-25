@@ -91,6 +91,8 @@ Slovo znie v angličtine aj slovenčine podobne, ale znamená niečo iné. Doslo
 
 - „menovať (= uvádzať)" (z „CZ jmenovat (uvádět v seznamu)") → **„uvádza / spomína"**
 
+- „dosiahne na N metrov" (z „reaches up to N meters") → **„má dosah N metrov"**
+
 - „berie kontext" (z „takes context from") → **„využíva / čerpá kontext"**
 
 Zoznam doplňuj, jakmile na další kalk narazíš.

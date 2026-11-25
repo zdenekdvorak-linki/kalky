@@ -325,4 +325,16 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „těsto stojí na špaldové mouce" (z „the dough is built on") → **„těsto je ze špaldové mouky / základem je špaldová mouka"**
 
+- „přístroj si vezme N W" (z „the device takes / draws N W") → **„„má příkon N W“ / „odebírá N W“"**
+
+- „vyhrazeny-reproduktor" (z „dedicated speaker") → **„samostatný reproduktor / reproduktor určený pro (řeč)"**
+
+- „dotaz / stránka sedí na N. místě / na pozici N" (z „the query sits at position N / ranks Nth") → **„je na N. místě / web je na dotaz N. / má pozici N"**
+
+- „servírovat obrázky ve WebP" (z „to serve images in WebP") → **„dodávat ve WebP / posílat prohlížeči ve WebP"**
+
+- „vypisovat kanonizaci / og značku (= generovat)" (z „to output the canonical / a meta tag") → **„generovat / uvádět"**
+
+- „jdou ve stejném pořadí" (z „the sections go in the same order") → **„následují ve stejném pořadí"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.
