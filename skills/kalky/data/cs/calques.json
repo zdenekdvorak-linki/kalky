@@ -1154,11 +1154,32 @@
       "counter": "Sekce následují ve stejném pořadí jako listy tabulky."
     },
     {
+      "key": "stránky přijímají návštěvníky",
+      "rx": "\\bpřijím(?:á|ají|al[aoy]?)\\b(?:\\s+\\S+){0,4}?\\s+návštěvník\\w*|\\bnávštěvník\\w*(?:\\s+\\S+){0,3}?\\s+přijím(?:á|ají|al[aoy]?)\\b",
+      "label": "stránky přijímají návštěvníky (pages receive visitors (from Google))",
+      "probe": "Web se objevuje u méně dotazů a návštěvníky z Google přijímá o 18 % méně stránek než loni.",
+      "counter": "Recepce přijímá hosty od 14 hodin a návštěvníky provází průvodce."
+    },
+    {
+      "key": "web dostává kliknutí",
+      "rx": "\\bdost(?:al[aiy]?|áv(?:á|al[aiy]?|ají|at)|ane|anou)\\b(?:\\s+\\S+){0,5}?\\s+(?:kliknutí|kliků|prokliků)\\b",
+      "label": "web dostává kliknutí (the site gets / receives clicks)",
+      "probe": "Od 16. 11. web dostává 66 kliknutí denně místo 112.",
+      "counter": "Dostal jsem od klienta přístup do Search Console a kliknutí jsem stáhl až později."
+    },
+    {
       "key": "most (Hue Bridge)",
       "rx": "\\b(?:[Řř]ídicí\\s+most\\w*|[Mm]ost(?:u|ě|em|y)?\\s+(?:Hue|Bridge|Zigbee|Matter)|(?:Hue|Zigbee|Matter)\\s+most\\w*)",
       "label": "most (Hue Bridge) (bridge)",
       "probe": "Funkce potřebuje most Hue Bridge Pro za necelé tři tisíce korun.",
       "counter": "Přes Karlův most jsme šli pěšky."
+    },
+    {
+      "key": "obvyklí podezřelí",
+      "rx": "obvykl\\w* podezřel\\w*",
+      "label": "obvyklí podezřelí (the usual suspects)",
+      "probe": "Claude nejdřív vyloučil obvyklé podezřelé.",
+      "counter": "Obvyklé podezření se nepotvrdilo."
     }
   ],
   "generic": {

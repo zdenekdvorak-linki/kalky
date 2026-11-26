@@ -337,6 +337,12 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „jdou ve stejném pořadí" (z „the sections go in the same order") → **„následují ve stejném pořadí"**
 
+- „stránky přijímají návštěvníky" (z „pages receive visitors (from Google)") → **„na stránky chodí návštěvníci / stránek, na které chodí návštěvníci"**
+
+- „web dostává kliknutí" (z „the site gets / receives clicks") → **„web získává kliknutí / z Google přichází N kliknutí"**
+
 - „most (Hue Bridge)" (z „bridge") → **„řídicí jednotka, nebo Hue Bridge / Bridge Pro"**
+
+- „obvyklí podezřelí" (z „the usual suspects") → **„nejčastější příčiny / obvyklí viníci"**
 
 Seznam doplňuj, jakmile na další kalk narazíš.
