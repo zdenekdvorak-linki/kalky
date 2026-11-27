@@ -173,10 +173,32 @@ objevit.
 Hranice vede u toho, o čem věta mluví. „Výdrž výrobce neuvádí" říká něco o věci,
 a proto zůstává. „Nic jsem neměřil" říká něco o pisateli.
 
+## 11. Ohlašovací věta a detektivní rámec
+
+Model dostane podklad jako sled kroků (přepis sezení, log, deník pokusů) a
+vyprávění z něj udělá detektivku: případ, stopa, viník, verdikt. Před fakt
+předřadí větu, která ho ohlásí, a za ním věty, které sčítají, co čtenář
+právě viděl.
+
+- ✗ „Verdikt zněl jasně: disk vyměnit, okamžitě zálohovat…“
+- ✗ „Diagnóza zněla: rozbitý vnitřní stav klienta.“
+- ✗ „Jedna otázka zůstala otevřená.“
+- ✗ „Vypadalo to jako jasný viník.“
+- ✗ „Dvakrát tedy Claude přiznal nejistotu.“
+- ✓ „Claude mi doporučil data okamžitě zálohovat, SSD vyměnit…“
+- ✓ „Který program tolik zapisuje, ale úplně nedohledal.“
+
+Ohlašovací věta zároveň říká, co si má čtenář myslet („jasně“), takže je
+příbuzná bodu 3. Sčítací věta opakuje informaci z předchozích odstavců. Když se
+stejná výhrada („přiznal chybu“, „dodal, že to neví“) objeví v článku pětkrát,
+z textu se stane chvála něčí poctivosti místo zprávy o tom, co se stalo. Nech
+jen výhrady, které nesou novou informaci, a každou jednou.
+
 ## Změny & rozhodnutí
 
 | datum | co | proč |
 | --- | --- | --- |
+| 2026-11-27 | Přidán bod 11 (ohlašovací věta a detektivní rámec) | Autor si u článku na GeekLife o diagnostice počítače s Claudem stěžoval na horší kvalitu a vytáhl „Verdikt zněl jasně:“ a „Jedna otázka zůstala otevřená.“. Text vznikl z přepisů sezení a výhradu „Claude přiznal / dodal / opravil se“ měl sedmkrát. Regexy pro ohlašovací formule a sčítací věty dostal redakční stylecheck (sdílené pro všechny české weby), `scripts/check.py` v tomhle repu je zatím nemá. |
 | 2026-11-07 | Přidán bod 10 (pokyn ze zadání prosákne do textu) | Úprava uživatele ve srovnání parních čističů na GeekLife: zadání obsahovalo „nic jsme netestovali“, model z toho udělal větu „nic jsem neměřil“ a uživatel ji škrtl. Nejde o pravidlo jednoho webu, ale o to, jak model zachází se zadáním. |
 | 2026-10-30 | Přidán bod 9 (autor obhajuje vlastní číslo) | Úprava uživatele v draftu GeekLife 25134: škrtl „Osm hodin denně jsem nevzal od stropu." V témže článku označil dalších pět vazeb, kde neživá věc dostala lidské sloveso (hodnota povyleze, vývod sedí, sloupec nese, krabice radí); dvě z nich odešly jako kalky do cs/kalky.md, zbytek je stylová preference GeekLife. |
 | 2026-10-29 | Přidány body 7 (klišé z tiskových zpráv) a 8 (střídání synonym místo názvu) | Porovnání prvních a finálních revizí 174 redakčních článků: redakce smazala „kabely jsou minulostí", čtyřikrát přepsala „krychli" a třikrát „stroj" na název přístroje; „mění pravidla hry" jen zmírnila na „chce měnit". |
