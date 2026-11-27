@@ -1180,6 +1180,41 @@
       "label": "obvyklí podezřelí (the usual suspects)",
       "probe": "Claude nejdřív vyloučil obvyklé podezřelé.",
       "counter": "Obvyklé podezření se nepotvrdilo."
+    },
+    {
+      "key": "persona dostává značku v N odpovědích",
+      "rx": "\\bdostáv(á|ají)\\s+\\w+\\s+(jen\\s+|pouze\\s+)?v\\s+\\d+\\s+(odpověd|výsledc|dotaz)",
+      "label": "persona dostává značku v N odpovědích (sellers get Knihobot in 16 of 20 answers)",
+      "probe": "Prodávající a šetřílci dostávají Knihobot v 16 odpovědích z 20.",
+      "counter": "Prodávající dostávají za knihy peníze do týdne."
+    },
+    {
+      "key": "persona vidí značku v N odpovědích",
+      "rx": "\\bvid(í|ěl[aiy]?)\\s+\\w+\\s+(jen\\s+|pouze\\s+)?v\\s+\\d+\\s+(odpověd|výsledc|dotaz)",
+      "label": "persona vidí značku v N odpovědích (the title hunter sees Bookbot in only 1 of 6 answers)",
+      "probe": "Lovec titulu vidí Bookbot jen v 1 odpovědi z 6.",
+      "counter": "Uživatel vidí v Německu jiné výsledky než v Česku."
+    },
+    {
+      "key": "první běh vrátil odpovědi",
+      "rx": "\\b(běh|měření|test)\\w*\\s+vrátil[aoy]?\\s+(odpověd|výsledk)",
+      "label": "první běh vrátil odpovědi (the first run returned answers for 10 prompts)",
+      "probe": "První běh vrátil odpovědi na 10 dotazů z 15.",
+      "counter": "Server vrátil odpověď 404 a zákazník vrátil knihu."
+    },
+    {
+      "key": "nakoupit od prodejců",
+      "rx": "\\b[Nn]akoup\\w*\\s+(?:si\\s+)?(?:tu\\s+|zde\\s+|tam\\s+)?od\\s+prodejc\\w*",
+      "label": "nakoupit od prodejců (to shop from vendors)",
+      "probe": "Nakoupíte tu od prodejců šperků a rukodělných výrobků.",
+      "counter": "Koupíte tu šperky přímo od prodejců."
+    },
+    {
+      "key": "akci zařazuje do města",
+      "rx": "\\b(?:ji|ho|je)\\s+zařazuj\\w*\\s+pravidelně\\b|\\bdo\\s+[A-ZČŘŠŽÚ]\\w+\\s+(?:ji|ho|je)\\s+zařazuj\\w*",
+      "label": "akci zařazuje do města (to schedule an event (in a city))",
+      "probe": "Akci pořádá Hobby výstaviště a do Kroměříže ji zařazuje pravidelně.",
+      "counter": "Tuto položku zařazuje do kategorie nářadí."
     }
   ],
   "generic": {

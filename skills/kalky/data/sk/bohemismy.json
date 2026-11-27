@@ -192,6 +192,24 @@
       "rx": "\\b(?:tarif\\s+(?:Ultra|Pro|Plus|Premium|Basic)|(?:drahší|lacnejší|vyšší|nižší|najdrahší|najlacnejší)\\s+tarif)\\b",
       "fix": "tarifa (ž. r.): tarifa Ultra, drahšia tarifa (české „tarif“, 2026-11-14)",
       "probe": "Predplatitelia majú tarif Ultra s 25 000 kreditmi, drahší tarif sa oplatí len niekomu."
+    },
+    {
+      "rx": "\\bposlúž\\w*\\b[^.]{0,25}\\bparkovisk\\w*|\\bparkovisk\\w*\\b[^.]{0,25}\\bposlúž\\w*",
+      "fix": "vodiči zaparkujú pri / pre vodičov je k dispozícii parkovisko (české „řidičům poslouží parkoviště“, 2026-11-27)",
+      "probe": "Verejnosti sa otvárajú o 9.00 a vodičom poslúži parkovisko hneď pri areáli.",
+      "counter": "Vodiči zaparkujú hneď pri areáli."
+    },
+    {
+      "rx": "\\bchyst(?:á|ajú|al|ala|ali|ať)\\s+(?!sa\\b)(?:aj\\s+)?(?:\\w+[\\s,]+){0,6}(?:burz|výstav|veľtrh|festival|trh)\\w*",
+      "fix": "pripravuje / organizuje (české „chystá burzy / výstavy“, 2026-11-27)",
+      "probe": "Organizátor z Otrokovíc chystá aj mineralogické, military, zberateľské a entomologické burzy.",
+      "counter": "Na výstavu sa chystá už od jari."
+    },
+    {
+      "rx": "\\b(?:ročník|akci|festival|veľtrh|výstav|podujat)\\w*\\s+(?:\\w+\\s+){0,2}prebehl\\w*|\\bprebehl\\w*\\s+(?:\\w+\\s+){0,2}(?:ročník|akci|festival|veľtrh|výstav|podujat)\\w*",
+      "fix": "konali sa / uskutočnili sa (české „ročníky proběhly“, 2026-11-27)",
+      "probe": "Predchádzajúce ročníky prebehli 26. – 28. 10. 2024 na tom istom výstavisku.",
+      "counter": "Mačka prebehla cez cestu pred výstaviskom."
     }
   ]
 }

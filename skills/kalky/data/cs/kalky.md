@@ -345,4 +345,14 @@ Nepřekládej anglické vazby doslova. Kalk zní česky nepřirozeně, i když j
 
 - „obvyklí podezřelí" (z „the usual suspects") → **„nejčastější příčiny / obvyklí viníci"**
 
+- „persona dostává značku v N odpovědích" (z „sellers get Knihobot in 16 of 20 answers") → **„u persony se značka objevila v N odpovědích / AI personě značku nabídla"**
+
+- „persona vidí značku v N odpovědích" (z „the title hunter sees Bookbot in only 1 of 6 answers") → **„personě AI značku nabídla jen v N odpovědích / u persony značka zazněla"**
+
+- „první běh vrátil odpovědi" (z „the first run returned answers for 10 prompts") → **„první běh přinesl odpovědi"**
+
+- „nakoupit od prodejců" (z „to shop from vendors") → **„koupíte přímo od prodejců / prodejci tu nabízejí"**
+
+- „akci zařazuje do města" (z „to schedule an event (in a city)") → **„akci tu pořádá / koná se tu pravidelně"**
+
 Seznam doplňuj, jakmile na další kalk narazíš.
